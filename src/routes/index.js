@@ -1,4 +1,5 @@
-import Home from '../components/Home';
+import Home from '../containers/Home';
+import Login from '../containers/Login';
 import NotFound from '../components/NotFound';
 
 export default [
@@ -6,13 +7,18 @@ export default [
     name: 'home',
     component: Home,
     exact: true,
-    path: '/',
+    path: '/'
   },
-
+  {
+    name: 'login',
+    component: Login,
+    exact: true,
+    path: '/login'
+  },
   {
     name: '404',
     component: NotFound,
     exact: true,
-    path: '*',
-  },
+    path: '*'
+  }
 ];
