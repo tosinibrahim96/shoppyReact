@@ -1,0 +1,62 @@
+{
+  "extends": ["plugin:import/errors", "plugin:import/warnings", "airbnb"],
+  "parser": "babel-eslint",
+  "plugins": ["react", "jsx-a11y", "import"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "one-var": 0,
+    "one-var-declaration-per-line": 0,
+    "new-cap": 0,
+    "consistent-return": 0,
+    "no-param-reassign": 0,
+    "comma-dangle": 0,
+    "curly": ["error", "multi-line"],
+    "react/destructuring-assignment": [
+      0,
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.js", "**/*.setup.js", "**/*.jsx"]
+      }
+    ],
+    "object-curly-newline": 0,
+    "function-paren-newline": 0,
+    "no-shadow": [
+      "error",
+      {
+        "allow": ["req", "res", "err"]
+      }
+    ],
+    "quotes": 2,
+    "no-console": 1,
+    "no-debugger": 1,
+    "no-var": 1,
+    "semi": [1, "always"],
+    "no-trailing-spaces": 2,
+    "eol-last": 2,
+    "no-unused-vars": 2,
+    "no-underscore-dangle": 0
+  }
+}

@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# Project
+dist/
+.nyc_output/
+coverage
+.env
+.vscode
