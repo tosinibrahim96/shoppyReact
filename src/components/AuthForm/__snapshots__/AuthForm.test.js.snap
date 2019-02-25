@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Login Form Component should match snapshot 1`] = `
+<Fragment>
+  <img
+    alt="store logo"
+    className="storeLogo"
+    src="test-file-stub"
+  />
+  <div
+    className="row formContainer"
+  >
+    <div
+      className="col-5 col-s-5 "
+    >
+      <Form
+        as="form"
+        className="loginForm"
+      >
+        <FormField
+          className="loginField"
+        >
+          <label
+            htmlFor="userEmail"
+          >
+            Email
+          </label>
+          <input
+            id="userEmail"
+            placeholder="Email"
+            required={true}
+            type="email"
+          />
+        </FormField>
+        <FormField
+          className="loginField"
+        >
+          <label
+            htmlFor="userPassword"
+          >
+            Password
+          </label>
+          <input
+            id="userPassword"
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+        </FormField>
+        <Button
+          as="button"
+          className="loginButton"
+          type="submit"
+        >
+          Submit
+        </Button>
+      </Form>
+    </div>
+    <img
+      alt="Background graphics"
+      className="col-5 col-s-5 customer"
+      src="test-file-stub"
+    />
+  </div>
+</Fragment>
+`;
