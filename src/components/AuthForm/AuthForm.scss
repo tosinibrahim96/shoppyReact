@@ -1,0 +1,49 @@
+.formContainer {
+  margin: auto;
+  margin-top: -30%;
+  padding: 5%;
+}
+.ui.button.loginButton {
+  color: #fff;
+  background: #ff6300;
+  width: 100%;
+}
+.ui.form.loginForm {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12%;
+}
+.loginField {
+  padding-bottom: 5%;
+}
+.customer {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .loginFormColumns {
+    margin: 0 auto;
+    margin-left: 30%;
+  }
+  .loginField {
+    padding-bottom: 2%;
+  }
+  .formContainer {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -10%;
+  }
+  .customer {
+    display: inline-block;
+    max-height: 100vh;
+    margin-left: 5%;
+    margin-top: -5%;
+  }
+  .storeLogo {
+    max-width: 50%;
+    padding-left: 5%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .customer {
+    margin-top: -15%;
+  }
+}
