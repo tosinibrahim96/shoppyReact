@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the DrawerToggleButton Component should match snapshot 1`] = `
+<button
+  className="toggle-button"
+  onClick={[MockFunction]}
+  type="button"
+>
+  <div
+    className="toggle-button__line"
+  />
+  <div
+    className="toggle-button__line"
+  />
+  <div
+    className="toggle-button__line"
+  />
+</button>
+`;

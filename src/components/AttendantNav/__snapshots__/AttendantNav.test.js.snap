@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the AttendantNav Component should match snapshot 1`] = `
+<ul>
+  <li>
+    <Link
+      replace={false}
+      to="/"
+    >
+      Dashboard
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/categories"
+    >
+      Categories
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/products"
+    >
+      Products
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/sales"
+    >
+      Sales
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/login"
+    >
+      Logout
+    </Link>
+  </li>
+</ul>
+`;

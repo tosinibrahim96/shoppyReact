@@ -1,6 +1,6 @@
 import Home from '../containers/Home';
 import Login from '../containers/Login';
-import NotFound from '../components/NotFound';
+import FourOhFour from '../containers/NotFound';
 
 export default [
   {
@@ -17,7 +17,7 @@ export default [
   },
   {
     name: '404',
-    component: NotFound,
+    component: FourOhFour,
     exact: true,
     path: '*'
   }

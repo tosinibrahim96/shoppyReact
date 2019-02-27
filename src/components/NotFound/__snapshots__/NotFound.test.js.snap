@@ -1,30 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test the 404 Component should match snapshot 1`] = `
-<div
-  id="notfound"
->
+<Fragment>
   <div
-    className="notfound"
+    id="notfound"
   >
     <div
-      className="notfound-404"
+      className="notfound"
     >
-      <h1>
-        Oops!
-      </h1>
-      <h2>
-        404 - The Page cant be found
-      </h2>
+      <div
+        className="notfound-404"
+      >
+        <h1>
+          Oops!
+        </h1>
+        <h2>
+          404 - The Page cant be found
+        </h2>
+      </div>
+      <Link
+        replace={false}
+        to="/"
+      >
+        <p>
+          Go TO Homepage
+        </p>
+      </Link>
     </div>
-    <Link
-      replace={false}
-      to="/"
-    >
-      <p>
-        Go TO Homepage
-      </p>
-    </Link>
   </div>
-</div>
+</Fragment>
 `;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the SideDrawer Component should match snapshot 1`] = `
+<header
+  className="toolbar"
+>
+  <nav
+    className="toolbar__navigation"
+  >
+    <div
+      className="toolbar__toggle-button"
+    >
+      <drawerToggleButton
+        click={[Function]}
+      />
+    </div>
+    <div
+      className="toolbar__logo"
+    >
+      <Link
+        replace={false}
+        to="/login"
+      >
+        Shoppy
+      </Link>
+    </div>
+    <div
+      className="spacer"
+    />
+    <div
+      className="toolbar_navigation-items"
+    >
+      <AdminNav />
+    </div>
+  </nav>
+</header>
+`;

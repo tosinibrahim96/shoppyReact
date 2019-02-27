@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Navbar Component should match snapshot 1`] = `
+<div
+  className="mainContainer"
+>
+  <toolbar
+    drawerClickHandler={[Function]}
+  />
+  <SideDrawer
+    show={false}
+  />
+  <main
+    className="pageContent"
+  >
+    <Component />
+  </main>
+</div>
+`;
