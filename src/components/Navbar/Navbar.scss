@@ -4,3 +4,11 @@
 .pageContent {
   margin-top: 64px;
 }
+
+@media (min-width: 769px) {
+  .pageContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
