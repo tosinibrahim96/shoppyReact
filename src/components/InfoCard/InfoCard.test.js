@@ -1,10 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import InfoCard from './index';
+import AdminCards from './index';
 
-describe('Test the InfoCard Component', () => {
+describe('Test the AdminCards Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<InfoCard />);
+    const userRole = 'attendant';
+    const product = 'product';
+    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should match snapshot', () => {
+    const userRole = 'admin';
+    const product = 'product';
+    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

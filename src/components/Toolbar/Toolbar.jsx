@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import AdminNav from '../AdminNav';
+import NavLinks from '../NavLinks';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.scss';
 
@@ -16,14 +16,17 @@ const toolbar = props => (
       </div>
       <div className="spacer" />
       <div className="toolbar_navigation-items">
-        <AdminNav />
+        <NavLinks userRole={props.userRole} />
       </div>
     </nav>
   </header>
 );
 
 toolbar.propTypes = {
-  drawerClickHandler: PropTypes.func.isRequired
+  drawerClickHandler: PropTypes.func.isRequired,
+  userRole: PropTypes.string.isRequired
 };
+
+toolbar.defaultProps = {};
 
 export default toolbar;

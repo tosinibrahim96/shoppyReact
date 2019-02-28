@@ -26,8 +26,11 @@ class Navbar extends Component {
     }
     return (
       <div className="mainContainer">
-        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <Toolbar
+          drawerClickHandler={this.drawerToggleClickHandler}
+          userRole={this.props.userRole}
+        />
+        <SideDrawer show={this.state.sideDrawerOpen} userRole={this.props.userRole} />
         {backdrop}
         <main className="pageContent">{this.props.displayPage}</main>
       </div>
@@ -36,7 +39,10 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  displayPage: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]).isRequired
+  displayPage: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]).isRequired,
+  userRole: PropTypes.string.isRequired
 };
+
+Navbar.defaultProps = {};
 
 export default Navbar;

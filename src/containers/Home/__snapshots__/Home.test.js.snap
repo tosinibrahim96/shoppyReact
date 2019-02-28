@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the AdminNav Component should match snapshot 1`] = `
+exports[`Test the Home Component should match snapshot 1`] = `
 <Navbar
   displayPage={<InfoCard />}
 />

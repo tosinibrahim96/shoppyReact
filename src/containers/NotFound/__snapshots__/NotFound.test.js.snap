@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the AdminNav Component should match snapshot 1`] = `<NotFound />`;
+exports[`Test the NotFound Component should match snapshot 1`] = `<NotFound />`;

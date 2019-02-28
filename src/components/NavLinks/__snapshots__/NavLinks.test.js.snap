@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the AdminNav Component should match snapshot 1`] = `
+exports[`Test the NavLinks Component should match snapshot 1`] = `
 <ul>
   <li>
     <Link
@@ -32,6 +32,43 @@ exports[`Test the AdminNav Component should match snapshot 1`] = `
       to="/sales"
     >
       Sales
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/login"
+    >
+      Logout
+    </Link>
+  </li>
+</ul>
+`;
+
+exports[`Test the NavLinks Component should match snapshot 2`] = `
+<ul>
+  <li>
+    <Link
+      replace={false}
+      to="/"
+    >
+      Dashboard
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/categories"
+    >
+      Categories
+    </Link>
+  </li>
+  <li>
+    <Link
+      replace={false}
+      to="/products"
+    >
+      Products
     </Link>
   </li>
   <li>

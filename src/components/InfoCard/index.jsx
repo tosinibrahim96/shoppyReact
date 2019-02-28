@@ -1,70 +1,83 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Icon, Button } from 'semantic-ui-react';
+import { Card, Button, Image, Icon } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 import './InfoCard.scss';
-import '../../partial-styles/responsive.scss';
 
-export default class InfoCard extends Component {
+export default class InfoCards extends Component {
+  displayAdminButtons = (userRole) => {
+    if (userRole === 'admin') {
+      return (
+        <div className="ui two buttons adminActions">
+          <Button basic color="green">
+            Edit
+          </Button>
+          <Button basic color="red">
+            Delete
+          </Button>
+        </div>
+      );
+    }
+  };
+
+  displayAddToCartButton = (currentPage, userRole) => {
+    if (currentPage === 'product' && userRole === 'attendant') {
+      return (
+        <Button animated>
+          <Button.Content visible>Add to Cart</Button.Content>
+          <Button.Content hidden>
+            <Icon name="arrow right" />
+          </Button.Content>
+        </Button>
+      );
+    }
+  };
+
+  createCard = () => {
+    const {
+      imageUrl,
+      nameToDisplay,
+      description,
+      mobileNumber,
+      userRole,
+      currentPage
+    } = this.props;
+    return (
+      <Card className="categoryCard">
+        <Image src={imageUrl} />
+        <Card.Content extra>
+          <Card.Header className="adminCardTitle">{nameToDisplay}</Card.Header>
+          <Card.Description className="adminCardDescription">{description}</Card.Description>
+          <Card.Description className="adminCardDescription">{mobileNumber}</Card.Description>
+          {this.displayAdminButtons(userRole)}
+          {this.displayAddToCartButton(currentPage, userRole)}
+        </Card.Content>
+      </Card>
+    );
+  };
+
   render() {
     return (
       <Fragment>
-        <div className="card">
-          <div className="card__side card__side--front card__side--front-1">
-            <div className="card__description">Categories</div>
-
-            <Card className="infoCard">
-              <h1 className="numberOfItems">2</h1>
-              <Button animated>
-                <Button.Content visible>View All</Button.Content>
-                <Button.Content hidden>
-                  <Icon name="arrow right" />
-                </Button.Content>
-              </Button>
-            </Card>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card__side card__side--front card__side--front-2">
-            <div className="card__description">Products</div>
-            <Card className="infoCard">
-              <h1 className="numberOfItems">12</h1>
-              <Button animated>
-                <Button.Content visible>View All</Button.Content>
-                <Button.Content hidden>
-                  <Icon name="arrow right" />
-                </Button.Content>
-              </Button>
-            </Card>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card__side card__side--front card__side--front-3">
-            <div className="card__description">Attendants</div>
-            <Card className="infoCard">
-              <h1 className="numberOfItems">3</h1>
-              <Button animated>
-                <Button.Content visible>View All</Button.Content>
-                <Button.Content hidden>
-                  <Icon name="arrow right" />
-                </Button.Content>
-              </Button>
-            </Card>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card__side card__side--front card__side--front-1">
-            <div className="card__description">Sales</div>
-            <Card className="infoCard">
-              <h1 className="numberOfItems">6</h1>
-              <Button animated>
-                <Button.Content visible>View All</Button.Content>
-                <Button.Content hidden>
-                  <Icon name="arrow right" />
-                </Button.Content>
-              </Button>
-            </Card>
-          </div>
-        </div>
+        <p className="adminCardsP">{`Add new ${this.props.currentPage}`}</p>
+        <div className="categoryCardContainer">{this.createCard()}</div>
       </Fragment>
     );
   }
 }
+
+InfoCards.propTypes = {
+  currentPage: PropTypes.string,
+  imageUrl: PropTypes.string,
+  nameToDisplay: PropTypes.string,
+  description: PropTypes.string,
+  mobileNumber: PropTypes.string,
+  userRole: PropTypes.string.isRequired
+};
+
+InfoCards.defaultProps = {
+  currentPage: '',
+  imageUrl: '',
+  nameToDisplay: '',
+  description: '',
+  mobileNumber: ''
+};

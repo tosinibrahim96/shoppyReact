@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import InfoCard from '../../components/InfoCard';
+import Navbar from '../Navbar';
+import DashboardCard from '../../components/DashboardCard';
 
 export default function Home() {
-  return <Navbar displayPage={<InfoCard />} />;
+  return <Navbar displayPage={<DashboardCard />} />;
 }
