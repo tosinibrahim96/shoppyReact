@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AdminNav from './index';
+import Category from './index';
 
-describe('Test the AdminNav Component', () => {
+describe('Test the Category Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<AdminNav />);
+    const wrapper = shallow(<Category />);
     expect(wrapper).toMatchSnapshot();
   });
 });

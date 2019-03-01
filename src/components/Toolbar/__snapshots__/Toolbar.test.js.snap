@@ -30,7 +30,9 @@ exports[`Test the SideDrawer Component should match snapshot 1`] = `
     <div
       className="toolbar_navigation-items"
     >
-      <AdminNav />
+      <NavLinks
+        userRole="attendant"
+      />
     </div>
   </nav>
 </header>

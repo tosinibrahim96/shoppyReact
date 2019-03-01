@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Navbar Component should match snapshot 1`] = `
+<Navbar
+  displayPage={[Function]}
+  userRole="admin"
+/>
+`;

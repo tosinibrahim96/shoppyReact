@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Attendant Component should match snapshot 1`] = `
+<Navbar
+  displayPage={
+    <InfoCards
+      currentPage="attendant"
+      description="attendant@mail.com"
+      imageUrl="https://i.imgur.com/344U6oc.jpg"
+      mobileNumber="08034563432"
+      nameToDisplay="attendantName"
+      userRole="admin"
+    />
+  }
+/>
+`;

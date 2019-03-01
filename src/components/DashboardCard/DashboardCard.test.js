@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Login from './index';
+import DasboardCard from './index';
 
-describe('Test the Login Component', () => {
+describe('Test the DasboardCard Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<Login />);
+    const wrapper = shallow(<DasboardCard />);
     expect(wrapper).toMatchSnapshot();
   });
 });

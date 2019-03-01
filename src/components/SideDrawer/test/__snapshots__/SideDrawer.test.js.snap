@@ -4,7 +4,9 @@ exports[`Test the SideDrawer Component should match snapshot 1`] = `
 <nav
   className="side-drawer open"
 >
-  <AdminNav />
+  <NavLinks
+    userRole="attendant"
+  />
 </nav>
 `;
 
@@ -12,6 +14,8 @@ exports[`Test the SideDrawer Component should match snapshot 2`] = `
 <nav
   className="side-drawer"
 >
-  <AdminNav />
+  <NavLinks
+    userRole="admin"
+  />
 </nav>
 `;

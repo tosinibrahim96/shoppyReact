@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import AdminNav from '../AdminNav';
+import NavLinks from '../NavLinks';
 import './styles/SideDrawer.scss';
 
 class SideDrawer extends Component {
@@ -11,14 +11,15 @@ class SideDrawer extends Component {
     }
     return (
       <nav className={drawerClasses}>
-        <AdminNav />
+        <NavLinks userRole={this.props.userRole} />
       </nav>
     );
   }
 }
 
 SideDrawer.propTypes = {
-  show: PropTypes.bool
+  show: PropTypes.bool,
+  userRole: PropTypes.string.isRequired
 };
 
 SideDrawer.defaultProps = {

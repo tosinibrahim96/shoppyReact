@@ -6,9 +6,11 @@ exports[`Test the Navbar Component should match snapshot 1`] = `
 >
   <toolbar
     drawerClickHandler={[Function]}
+    userRole="attendant"
   />
   <SideDrawer
     show={false}
+    userRole="attendant"
   />
   <main
     className="pageContent"

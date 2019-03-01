@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SideDrawer from '../SideDrawer';
+import NavLinks from './index';
 
-describe('Test the SideDrawer Component', () => {
+describe('Test the NavLinks Component', () => {
   it('should match snapshot', () => {
     const userRole = 'attendant';
-    const wrapper = shallow(<SideDrawer show userRole={userRole} />);
+    const wrapper = shallow(<NavLinks userRole={userRole} />);
     expect(wrapper).toMatchSnapshot();
   });
   it('should match snapshot', () => {
     const userRole = 'admin';
-    const wrapper = shallow(<SideDrawer show={false} userRole={userRole} />);
+    const wrapper = shallow(<NavLinks userRole={userRole} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

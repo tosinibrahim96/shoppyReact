@@ -1,26 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the InfoCard Component should match snapshot 1`] = `
+exports[`Test the AdminCards Component should match snapshot 1`] = `
 <Fragment>
-  <div
-    className="card"
+  <p
+    className="adminCardsP"
   >
-    <div
-      className="card__side card__side--front card__side--front-1"
+    Add new product
+  </p>
+  <div
+    className="categoryCardContainer"
+  >
+    <Card
+      className="categoryCard"
     >
-      <div
-        className="card__description"
+      <Image
+        as="img"
+        src=""
+        ui={true}
+      />
+      <CardContent
+        extra={true}
       >
-        Categories
-      </div>
-      <Card
-        className="infoCard"
-      >
-        <h1
-          className="numberOfItems"
-        >
-          2
-        </h1>
+        <CardHeader
+          className="adminCardTitle"
+        />
+        <CardDescription
+          className="adminCardDescription"
+        />
+        <CardDescription
+          className="adminCardDescription"
+        />
         <Button
           animated={true}
           as="button"
@@ -28,7 +37,7 @@ exports[`Test the InfoCard Component should match snapshot 1`] = `
           <ButtonContent
             visible={true}
           >
-            View All
+            Add to Cart
           </ButtonContent>
           <ButtonContent
             hidden={true}
@@ -39,128 +48,62 @@ exports[`Test the InfoCard Component should match snapshot 1`] = `
             />
           </ButtonContent>
         </Button>
-      </Card>
-    </div>
+      </CardContent>
+    </Card>
   </div>
-  <div
-    className="card"
+</Fragment>
+`;
+
+exports[`Test the AdminCards Component should match snapshot 2`] = `
+<Fragment>
+  <p
+    className="adminCardsP"
   >
-    <div
-      className="card__side card__side--front card__side--front-2"
-    >
-      <div
-        className="card__description"
-      >
-        Products
-      </div>
-      <Card
-        className="infoCard"
-      >
-        <h1
-          className="numberOfItems"
-        >
-          12
-        </h1>
-        <Button
-          animated={true}
-          as="button"
-        >
-          <ButtonContent
-            visible={true}
-          >
-            View All
-          </ButtonContent>
-          <ButtonContent
-            hidden={true}
-          >
-            <Icon
-              as="i"
-              name="arrow right"
-            />
-          </ButtonContent>
-        </Button>
-      </Card>
-    </div>
-  </div>
+    Add new product
+  </p>
   <div
-    className="card"
+    className="categoryCardContainer"
   >
-    <div
-      className="card__side card__side--front card__side--front-3"
+    <Card
+      className="categoryCard"
     >
-      <div
-        className="card__description"
+      <Image
+        as="img"
+        src=""
+        ui={true}
+      />
+      <CardContent
+        extra={true}
       >
-        Attendants
-      </div>
-      <Card
-        className="infoCard"
-      >
-        <h1
-          className="numberOfItems"
+        <CardHeader
+          className="adminCardTitle"
+        />
+        <CardDescription
+          className="adminCardDescription"
+        />
+        <CardDescription
+          className="adminCardDescription"
+        />
+        <div
+          className="ui two buttons adminActions"
         >
-          3
-        </h1>
-        <Button
-          animated={true}
-          as="button"
-        >
-          <ButtonContent
-            visible={true}
+          <Button
+            as="button"
+            basic={true}
+            color="green"
           >
-            View All
-          </ButtonContent>
-          <ButtonContent
-            hidden={true}
+            Edit
+          </Button>
+          <Button
+            as="button"
+            basic={true}
+            color="red"
           >
-            <Icon
-              as="i"
-              name="arrow right"
-            />
-          </ButtonContent>
-        </Button>
-      </Card>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="card__side card__side--front card__side--front-1"
-    >
-      <div
-        className="card__description"
-      >
-        Sales
-      </div>
-      <Card
-        className="infoCard"
-      >
-        <h1
-          className="numberOfItems"
-        >
-          6
-        </h1>
-        <Button
-          animated={true}
-          as="button"
-        >
-          <ButtonContent
-            visible={true}
-          >
-            View All
-          </ButtonContent>
-          <ButtonContent
-            hidden={true}
-          >
-            <Icon
-              as="i"
-              name="arrow right"
-            />
-          </ButtonContent>
-        </Button>
-      </Card>
-    </div>
+            Delete
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
   </div>
 </Fragment>
 `;
