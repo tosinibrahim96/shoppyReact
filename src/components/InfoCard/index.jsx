@@ -1,9 +1,23 @@
 import React, { Component, Fragment } from 'react';
 import { Card, Button, Image, Icon } from 'semantic-ui-react';
+import Modal from 'react-responsive-modal';
 import PropTypes from 'prop-types';
+import selectModalForm from '../../helpers/SelectModalForm';
 import './InfoCard.scss';
 
 export default class InfoCards extends Component {
+  state = {
+    open: false
+  };
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
   displayAdminButtons = (userRole) => {
     if (userRole === 'admin') {
       return (
@@ -56,9 +70,15 @@ export default class InfoCards extends Component {
   };
 
   render() {
+    const { open } = this.state;
     return (
       <Fragment>
-        <p className="adminCardsP">{`Add new ${this.props.currentPage}`}</p>
+        <p role="presentation" className="adminCardsP" onClick={this.onOpenModal}>
+          {`Add new ${this.props.currentPage}`}
+        </p>
+        <Modal open={open} onClose={this.onCloseModal} center>
+          {selectModalForm(this.props.currentPage)}
+        </Modal>
         <div className="categoryCardContainer">{this.createCard()}</div>
       </Fragment>
     );

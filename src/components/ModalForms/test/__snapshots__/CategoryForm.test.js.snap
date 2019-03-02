@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the CategoryForm Component should match snapshot 1`] = `
+<Form
+  as="form"
+  className="modalForm"
+>
+  <FormField
+    className="formField"
+  >
+    <input
+      placeholder="Category Name"
+    />
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <input
+      placeholder="Image URL (example:https://exampleimageurl.jpg)"
+      typeof="url"
+    />
+    <a
+      href="https://imgur.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Upload image here
+    </a>
+  </FormField>
+  <FormTextArea
+    as={[Function]}
+    className="formField"
+    control={[Function]}
+    placeholder="Short Description"
+  />
+  <Button
+    as="button"
+    type="submit"
+  >
+    Submit
+  </Button>
+</Form>
+`;
