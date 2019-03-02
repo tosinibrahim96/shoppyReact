@@ -1,0 +1,21 @@
+.styles_modal__gNwvD {
+  max-width: 900px;
+}
+
+.ui.form.modalForm {
+  padding-top: 25%;
+  padding-bottom: 15%;
+}
+.ui.form .field.formField {
+  margin-bottom: 10%;
+}
+
+@media only screen and (min-width: 600px) {
+  .ui.form.modalForm {
+    width: 500px;
+  }
+  .styles_modal__gNwvD {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

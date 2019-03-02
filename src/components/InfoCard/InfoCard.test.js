@@ -14,5 +14,14 @@ describe('Test the AdminCards Component', () => {
     const product = 'product';
     const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.state('open')).toBe(false);
+  });
+  it('should match snapshot', () => {
+    const userRole = 'admin';
+    const product = 'product';
+    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
+    wrapper.find('p').simulate('click');
+    expect(wrapper.state('open')).toBe(true);
+    wrapper.instance().onCloseModal();
   });
 });
