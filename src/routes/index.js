@@ -4,6 +4,7 @@ import FourOhFour from '../containers/NotFound';
 import Category from '../containers/Category';
 import Product from '../containers/Product';
 import Attendant from '../containers/Attendant';
+import UnauthorizedPage from '../containers/Unauthorized';
 
 export default [
   {
@@ -36,6 +37,13 @@ export default [
     exact: true,
     path: '/attendants'
   },
+  {
+    name: 'unauthorized',
+    component: UnauthorizedPage,
+    exact: true,
+    path: '/access-denied'
+  },
+
   {
     name: '404',
     component: FourOhFour,
