@@ -16,17 +16,14 @@ exports[`Test the Login Form Component should match snapshot 1`] = `
       <Form
         as="form"
         className="loginForm"
+        onSubmit={[Function]}
       >
         <FormField
           className="loginField"
         >
-          <label
-            htmlFor="userEmail"
-          >
-            Email
-          </label>
           <input
             id="userEmail"
+            onChange={[Function]}
             placeholder="Email"
             required={true}
             type="email"
@@ -35,13 +32,9 @@ exports[`Test the Login Form Component should match snapshot 1`] = `
         <FormField
           className="loginField"
         >
-          <label
-            htmlFor="userPassword"
-          >
-            Password
-          </label>
           <input
             id="userPassword"
+            onChange={[Function]}
             placeholder="Password"
             required={true}
             type="password"
@@ -63,4 +56,11 @@ exports[`Test the Login Form Component should match snapshot 1`] = `
     />
   </div>
 </Fragment>
+`;
+
+exports[`Test the Login Form Component should match snapshot 2`] = `
+<Redirect
+  push={false}
+  to="/"
+/>
 `;

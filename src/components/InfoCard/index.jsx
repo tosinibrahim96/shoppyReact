@@ -2,7 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Card, Button, Image, Icon } from 'semantic-ui-react';
 import Modal from 'react-responsive-modal';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import selectModalForm from '../../helpers/SelectModalForm';
+import { getUserInfo } from '../../helpers/jwtHelper';
 import './InfoCard.scss';
 
 export default class InfoCards extends Component {
@@ -71,7 +73,10 @@ export default class InfoCards extends Component {
 
   render() {
     const { open } = this.state;
-    return (
+    const userInfo = getUserInfo();
+    return !userInfo ? (
+      <Redirect to="/login" />
+    ) : (
       <Fragment>
         <p role="presentation" className="adminCardsP" onClick={this.onOpenModal}>
           {`Add new ${this.props.currentPage}`}
