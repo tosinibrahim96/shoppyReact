@@ -11,6 +11,7 @@ describe('Test the NavLinks Component', () => {
   it('should match snapshot', () => {
     const userRole = 'admin';
     const wrapper = shallow(<NavLinks userRole={userRole} />);
+    wrapper.instance().handleLogout();
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -24,6 +24,9 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "coveragePathIgnorePatterns": [
+      "helpers"
     ]
   },
   "husky": {
@@ -55,6 +58,7 @@
     "enzyme": "^3.8.0",
     "express": "^4.16.4",
     "imagemin-pngquant": "^5.0.1",
+    "jwt-decode": "^2.2.0",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.7.2",
@@ -64,6 +68,7 @@
     "react-responsive-carousel": "^3.1.47",
     "react-responsive-modal": "^3.6.0",
     "react-router-dom": "^4.3.1",
+    "react-toastify": "^4.5.2",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.3",

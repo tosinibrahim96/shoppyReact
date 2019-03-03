@@ -164,3 +164,10 @@ exports[`Test the DasboardCard Component should match snapshot 1`] = `
   </div>
 </Fragment>
 `;
+
+exports[`Test the DasboardCard Component should match snapshot 2`] = `
+<Redirect
+  push={false}
+  to="/login"
+/>
+`;

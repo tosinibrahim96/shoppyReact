@@ -1,12 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { Card, Icon, Button } from 'semantic-ui-react';
+import { Redirect } from 'react-router-dom';
 import cardInfo from '../../helpers/DashboardCard';
 import './DashboardCard.scss';
 import '../../partial-styles/responsive.scss';
+import { getUserInfo } from '../../helpers/jwtHelper';
 
 export default class InfoCard extends Component {
   render() {
-    return (
+    const userInfo = getUserInfo();
+    return !userInfo ? (
+      <Redirect to="/login" />
+    ) : (
       <Fragment>
         {cardInfo.map(({ front, description, numberOfItems, viewAll }) => (
           <div className="card">

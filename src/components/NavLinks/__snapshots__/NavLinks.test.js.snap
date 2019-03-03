@@ -34,10 +34,13 @@ exports[`Test the NavLinks Component should match snapshot 1`] = `
       Sales
     </Link>
   </li>
-  <li>
+  <li
+    onClick={[Function]}
+    role="presentation"
+  >
     <Link
       replace={false}
-      to="/login"
+      to="#"
     >
       Logout
     </Link>
@@ -79,10 +82,13 @@ exports[`Test the NavLinks Component should match snapshot 2`] = `
       Attendants
     </Link>
   </li>
-  <li>
+  <li
+    onClick={[Function]}
+    role="presentation"
+  >
     <Link
       replace={false}
-      to="/login"
+      to="#"
     >
       Logout
     </Link>
