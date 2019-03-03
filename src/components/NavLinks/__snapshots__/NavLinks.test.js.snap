@@ -40,7 +40,7 @@ exports[`Test the NavLinks Component should match snapshot 1`] = `
   >
     <Link
       replace={false}
-      to="#"
+      to="/login"
     >
       Logout
     </Link>
@@ -88,7 +88,7 @@ exports[`Test the NavLinks Component should match snapshot 2`] = `
   >
     <Link
       replace={false}
-      to="#"
+      to="/login"
     >
       Logout
     </Link>

@@ -9,7 +9,7 @@ exports[`Test the Category Component should match snapshot 1`] = `
       imageUrl="https://i.imgur.com/UBDlxxg.jpg"
       mobileNumber=""
       nameToDisplay="categoryName"
-      userRole="admin"
+      userRole=""
     />
   }
 />

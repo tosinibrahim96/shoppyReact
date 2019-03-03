@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class NavLinks extends Component {
   handleLogout = () => {
     localStorage.removeItem('Authentication');
-    return <Redirect to="/login" />;
   };
 
   displayCorrectSidebar = (role) => {
@@ -38,7 +37,7 @@ export default class NavLinks extends Component {
         </li>
         {this.displayCorrectSidebar(userRole)}
         <li role="presentation" onClick={this.handleLogout}>
-          <Link to="#">Logout</Link>
+          <Link to="/login">Logout</Link>
         </li>
       </ul>
     );
