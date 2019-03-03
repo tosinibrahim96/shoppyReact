@@ -4,7 +4,6 @@ import moxios from 'moxios';
 import * as actions from './index';
 import actionTypes from './actionTypes';
 import axios from '../../helpers/axiosHelper/loginRequest';
-import loginRequest from '../../helpers/axiosHelper/loginRequest';
 
 const { USER_LOGIN_FAILURE, USER_LOGIN_LOADING, USER_LOGIN_SUCCESS } = actionTypes;
 

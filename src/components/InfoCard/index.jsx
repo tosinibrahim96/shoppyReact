@@ -71,16 +71,26 @@ export default class InfoCards extends Component {
     );
   };
 
+  displayAddInfoButton = (userRole) => {
+    if (userRole === 'admin') {
+      return (
+        <p role="presentation" className="adminCardsP" onClick={this.onOpenModal}>
+          {`Add new ${this.props.currentPage}`}
+        </p>
+      );
+    }
+  };
+
   render() {
     const { open } = this.state;
+    const { userRole } = this.props;
     const userInfo = getUserInfo();
     return !userInfo ? (
       <Redirect to="/login" />
     ) : (
       <Fragment>
-        <p role="presentation" className="adminCardsP" onClick={this.onOpenModal}>
-          {`Add new ${this.props.currentPage}`}
-        </p>
+        {this.displayAddInfoButton(userRole)}
+
         <Modal open={open} onClose={this.onCloseModal} center>
           {selectModalForm(this.props.currentPage)}
         </Modal>
@@ -96,7 +106,7 @@ InfoCards.propTypes = {
   nameToDisplay: PropTypes.string,
   description: PropTypes.string,
   mobileNumber: PropTypes.string,
-  userRole: PropTypes.string.isRequired
+  userRole: PropTypes.string
 };
 
 InfoCards.defaultProps = {
@@ -104,5 +114,6 @@ InfoCards.defaultProps = {
   imageUrl: '',
   nameToDisplay: '',
   description: '',
-  mobileNumber: ''
+  mobileNumber: '',
+  userRole: ''
 };

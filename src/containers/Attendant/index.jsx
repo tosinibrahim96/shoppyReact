@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar';
 import AttendantComponent from '../../components/InfoCard';
+import { getUserInfo } from '../../helpers/jwtHelper';
+import Unauthorized from '../../components/Unauthorized';
 
-export default class Category extends Component {
+export default class Attendant extends Component {
   render() {
-    return (
+    const result = getUserInfo();
+    const { userRole } = result;
+    return userRole === 'admin' ? (
       <Navbar
         displayPage={(
           <AttendantComponent
@@ -13,10 +17,12 @@ export default class Category extends Component {
             currentPage="attendant"
             description="attendant@mail.com"
             mobileNumber="08034563432"
-            userRole="admin"
+            userRole={userRole}
           />
 )}
       />
+    ) : (
+      <Unauthorized />
     );
   }
 }
