@@ -2,6 +2,6 @@
 
 exports[`Test the Home Component should match snapshot 1`] = `
 <Navbar
-  displayPage={<InfoCard />}
+  displayPage={<Connect(withRouter(InfoCard)) />}
 />
 `;
