@@ -8,7 +8,6 @@ const instance = axios.create({
 instance.interceptors.request.use((config) => {
   const configObj = config;
   configObj.headers.token = localStorage.getItem('Authentication');
-
   return configObj;
 });
 

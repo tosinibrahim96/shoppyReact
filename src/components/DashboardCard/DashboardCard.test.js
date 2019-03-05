@@ -1,6 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import DasboardCard from './index';
+import { mount } from 'enzyme';
+import { InfoCardPage } from './index';
+import { productCategories } from '../../actions/getCategoriesAction';
+import { getAllProducts } from '../../actions/getProductsAction';
+import { storeAttendants } from '../../actions/getAttendantsAction';
+import { getAllSales } from '../../actions/getTotalSalesAction';
 
 describe('Test the DasboardCard Component', () => {
   beforeAll(() => {
@@ -12,15 +16,41 @@ describe('Test the DasboardCard Component', () => {
   afterEach(() => {
     localStorage.removeItem('Authentication');
   });
+  const allCategories = { successResponse: { length: 0 } };
+  const allProducts = { successResponse: { length: 0 } };
+  const allAttendants = { successResponse: { length: 0 } };
   it('should match snapshot', () => {
-    const wrapper = shallow(<DasboardCard />);
+    const wrapper = mount(
+      <InfoCardPage
+        productCategories={productCategories}
+        getAllProducts={getAllProducts}
+        storeAttendants={storeAttendants}
+        getAllSales={getAllSales}
+        allCategories={allCategories}
+        allProducts={allProducts}
+        allAttendants={allAttendants}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Test the DasboardCard Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<DasboardCard />);
+    const allCategories = { successResponse: { length: 3 } };
+    const allProducts = { successResponse: { length: 3 } };
+    const allAttendants = { successResponse: { length: 3 } };
+    const wrapper = mount(
+      <InfoCardPage
+        productCategories={productCategories}
+        getAllProducts={getAllProducts}
+        storeAttendants={storeAttendants}
+        getAllSales={getAllSales}
+        allCategories={allCategories}
+        allProducts={allProducts}
+        allAttendants={allAttendants}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

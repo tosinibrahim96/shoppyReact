@@ -1,13 +1,388 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test the DasboardCard Component should match snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<InfoCard
+  allAttendants={
+    Object {
+      "successResponse": Object {
+        "length": 0,
+      },
+    }
+  }
+  allCategories={
+    Object {
+      "successResponse": Object {
+        "length": 0,
+      },
+    }
+  }
+  allProducts={
+    Object {
+      "successResponse": Object {
+        "length": 0,
+      },
+    }
+  }
+  getAllProducts={[Function]}
+  getAllSales={[Function]}
+  productCategories={[Function]}
+  storeAttendants={[Function]}
+>
+  <div
+    className="card"
+    key="0"
+  >
+    <div
+      className="card__side card__side--front card__side--front-1"
+    >
+      <div
+        className="card__description"
+      >
+        Categories
+      </div>
+      <Card
+        className="infoCard"
+      >
+        <div
+          className="ui card infoCard"
+          onClick={[Function]}
+        >
+          <h1
+            className="numberOfItems"
+          >
+            0
+          </h1>
+          <Button
+            animated={true}
+            as="button"
+          >
+            <button
+              className="ui animated button"
+              onClick={[Function]}
+            >
+              <ButtonContent
+                visible={true}
+              >
+                <div
+                  className="visible content"
+                >
+                  View All
+                </div>
+              </ButtonContent>
+              <ButtonContent
+                hidden={true}
+              >
+                <div
+                  className="hidden content"
+                >
+                  <Icon
+                    as="i"
+                    name="arrow right"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="arrow right icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </div>
+              </ButtonContent>
+            </button>
+          </Button>
+        </div>
+      </Card>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="1"
+  >
+    <div
+      className="card__side card__side--front card__side--front-2"
+    >
+      <div
+        className="card__description"
+      >
+        Products
+      </div>
+      <Card
+        className="infoCard"
+      >
+        <div
+          className="ui card infoCard"
+          onClick={[Function]}
+        >
+          <h1
+            className="numberOfItems"
+          >
+            0
+          </h1>
+          <Button
+            animated={true}
+            as="button"
+          >
+            <button
+              className="ui animated button"
+              onClick={[Function]}
+            >
+              <ButtonContent
+                visible={true}
+              >
+                <div
+                  className="visible content"
+                >
+                  View All
+                </div>
+              </ButtonContent>
+              <ButtonContent
+                hidden={true}
+              >
+                <div
+                  className="hidden content"
+                >
+                  <Icon
+                    as="i"
+                    name="arrow right"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="arrow right icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </div>
+              </ButtonContent>
+            </button>
+          </Button>
+        </div>
+      </Card>
+    </div>
+  </div>
+</InfoCard>
 `;
 
 exports[`Test the DasboardCard Component should match snapshot 2`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<InfoCard
+  allAttendants={
+    Object {
+      "successResponse": Object {
+        "length": 3,
+      },
+    }
+  }
+  allCategories={
+    Object {
+      "successResponse": Object {
+        "length": 3,
+      },
+    }
+  }
+  allProducts={
+    Object {
+      "successResponse": Object {
+        "length": 3,
+      },
+    }
+  }
+  getAllProducts={[Function]}
+  getAllSales={[Function]}
+  productCategories={[Function]}
+  storeAttendants={[Function]}
+>
+  <div
+    className="card"
+    key="0"
+  >
+    <div
+      className="card__side card__side--front card__side--front-1"
+    >
+      <div
+        className="card__description"
+      >
+        Categories
+      </div>
+      <Card
+        className="infoCard"
+      >
+        <div
+          className="ui card infoCard"
+          onClick={[Function]}
+        >
+          <h1
+            className="numberOfItems"
+          >
+            3
+          </h1>
+          <Button
+            animated={true}
+            as="button"
+          >
+            <button
+              className="ui animated button"
+              onClick={[Function]}
+            >
+              <ButtonContent
+                visible={true}
+              >
+                <div
+                  className="visible content"
+                >
+                  View All
+                </div>
+              </ButtonContent>
+              <ButtonContent
+                hidden={true}
+              >
+                <div
+                  className="hidden content"
+                >
+                  <Icon
+                    as="i"
+                    name="arrow right"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="arrow right icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </div>
+              </ButtonContent>
+            </button>
+          </Button>
+        </div>
+      </Card>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="1"
+  >
+    <div
+      className="card__side card__side--front card__side--front-2"
+    >
+      <div
+        className="card__description"
+      >
+        Products
+      </div>
+      <Card
+        className="infoCard"
+      >
+        <div
+          className="ui card infoCard"
+          onClick={[Function]}
+        >
+          <h1
+            className="numberOfItems"
+          >
+            3
+          </h1>
+          <Button
+            animated={true}
+            as="button"
+          >
+            <button
+              className="ui animated button"
+              onClick={[Function]}
+            >
+              <ButtonContent
+                visible={true}
+              >
+                <div
+                  className="visible content"
+                >
+                  View All
+                </div>
+              </ButtonContent>
+              <ButtonContent
+                hidden={true}
+              >
+                <div
+                  className="hidden content"
+                >
+                  <Icon
+                    as="i"
+                    name="arrow right"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="arrow right icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </div>
+              </ButtonContent>
+            </button>
+          </Button>
+        </div>
+      </Card>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="2"
+  >
+    <div
+      className="card__side card__side--front card__side--front-3"
+    >
+      <div
+        className="card__description"
+      >
+        Attendants
+      </div>
+      <Card
+        className="infoCard"
+      >
+        <div
+          className="ui card infoCard"
+          onClick={[Function]}
+        >
+          <h1
+            className="numberOfItems"
+          >
+            3
+          </h1>
+          <Button
+            animated={true}
+            as="button"
+          >
+            <button
+              className="ui animated button"
+              onClick={[Function]}
+            >
+              <ButtonContent
+                visible={true}
+              >
+                <div
+                  className="visible content"
+                >
+                  View All
+                </div>
+              </ButtonContent>
+              <ButtonContent
+                hidden={true}
+              >
+                <div
+                  className="hidden content"
+                >
+                  <Icon
+                    as="i"
+                    name="arrow right"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="arrow right icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </div>
+              </ButtonContent>
+            </button>
+          </Button>
+        </div>
+      </Card>
+    </div>
+  </div>
+</InfoCard>
 `;
