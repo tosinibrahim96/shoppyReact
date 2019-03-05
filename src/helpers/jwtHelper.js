@@ -16,8 +16,4 @@ const getUserInfo = () => {
 
 const getToken = localStorage.getItem(authentication);
 
-const config = {
-  headers: { Authorization: getToken }
-};
-
-export { setToken, getToken, config, getUserInfo };
+export { setToken, getToken, getUserInfo };
