@@ -1,6 +1,11 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import InfoCardsPage from './index';
+import { InfoCardsPage } from './index';
+import { deleteProductCategory } from '../../actions/deleteCategoryAction';
+import { deleteProduct } from '../../actions/deleteProductAction';
+import { deleteStoreAttendant } from '../../actions/deleteAttendantAction';
+
+const id = 5;
 
 describe('Test the AdminCards Component', () => {
   beforeEach(() => {
@@ -16,18 +21,42 @@ describe('Test the AdminCards Component', () => {
   it('should match snapshot', () => {
     const userRole = 'admin';
     const product = 'product';
-    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} />);
-    wrapper.find('p').simulate('click');
-    expect(wrapper.state('open')).toBe(false);
+    const attendant = 'attendant';
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} id={id} />);
     wrapper.instance().onCloseModal();
     wrapper.instance().onOpenModal();
     wrapper.instance().displayAdminButtons();
+    wrapper.instance().deleteContent();
+    wrapper.instance().displayAdminButtons();
     wrapper.instance().displayAddToCartButton();
   });
+
+  it('should match snapshot', () => {
+    const userRole = 'admin';
+    const product = 'product';
+    const category = 'category';
+    const attendant = 'attendant';
+    const wrapper = shallow(
+      <InfoCardsPage
+        userRole={userRole}
+        currentPage={product}
+        id={id}
+        deleteProduct={deleteProduct}
+        deleteProductCategory={deleteProductCategory}
+        deleteStoreAttendant={deleteStoreAttendant}
+      />
+    );
+    wrapper.instance().deleteContent(product);
+    wrapper.instance().deleteContent(category);
+    wrapper.instance().deleteContent(attendant);
+    wrapper.instance().openDeleteModal();
+    wrapper.instance().closeDeleteModal();
+  });
+
   it('should match snapshot', () => {
     const userRole = 'attendant';
     const product = 'product';
-    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} />);
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} id={id} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -42,7 +71,9 @@ describe('Test the AdminCards Component', () => {
     };
     const userRole = 'admin';
     const product = 'product';
-    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} {...props} />);
+    const wrapper = shallow(
+      <InfoCardsPage userRole={userRole} currentPage={product} {...props} id={id} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -58,20 +89,9 @@ describe('Test the AdminCards Component', () => {
 
     const userRole = 'attendant';
     const product = 'product';
-    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} {...props} />);
-    wrapper.instance().displayAddToCartButton();
+    const wrapper = shallow(
+      <InfoCardsPage userRole={userRole} currentPage={product} {...props} id={id} />
+    );
     expect(wrapper).toMatchSnapshot();
-  });
-  it('should stimulate on submit event', () => {
-    const props = {
-      nameToDisplay: 'John Doe',
-      imageUrl: 'https://i.imgur.com/27DUH5b.jpg',
-      description: 'admin@mail.com',
-      mobileNumber: '08076543241'
-    };
-    const wrapper = shallow(<InfoCardsPage {...props} />);
-    wrapper.instance().openDeleteModal();
-    wrapper.instance().closeDeleteModal();
-    expect(wrapper.state('deleteOpen')).toBe(false);
   });
 });

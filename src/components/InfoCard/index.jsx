@@ -2,12 +2,16 @@ import React, { Component, Fragment } from 'react';
 import { Card, Button, Image, Icon } from 'semantic-ui-react';
 import Modal from 'react-responsive-modal';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import selectModalForm from '../../helpers/SelectModalForm';
+import { deleteProductCategory } from '../../actions/deleteCategoryAction';
+import { deleteProduct } from '../../actions/deleteProductAction';
+import { deleteStoreAttendant } from '../../actions/deleteAttendantAction';
 import { getUserInfo } from '../../helpers/jwtHelper';
 import './InfoCard.scss';
 
-export default class InfoCards extends Component {
+class InfoCards extends Component {
   state = {
     open: false,
     deleteOpen: false
@@ -80,21 +84,42 @@ export default class InfoCards extends Component {
     );
   };
 
+  deleteContent = (currentPage, componentId) => {
+    switch (currentPage) {
+      case 'category':
+        this.props.deleteProductCategory(componentId);
+        break;
+      case 'product':
+        this.props.deleteProduct(componentId);
+        break;
+      case 'attendant':
+        this.props.deleteStoreAttendant(componentId);
+        break;
+      default:
+        break;
+    }
+  };
+
   displayModals = () => {
     const { open, deleteOpen } = this.state;
+    const { currentPage, id } = this.props;
     return (
       <Fragment>
         <Modal open={open} onClose={this.onCloseModal} center>
-          {selectModalForm(this.props.currentPage, this.props)}
+          {selectModalForm(currentPage, this.props)}
         </Modal>
         <Modal open={deleteOpen} onClose={this.closeDeleteModal} center>
-          <p className="confirmDelete">
-            {`Are You Sure You want to delete this ${this.props.currentPage}`}
-          </p>
+          <p className="confirmDelete">{`Are You Sure You want to delete this ${currentPage}`}</p>
           <Button negative className="noDelete" onClick={this.closeDeleteModal}>
             No
           </Button>
-          <Button positive icon="checkmark" labelPosition="right" content="Yes" />
+          <Button
+            positive
+            icon="checkmark"
+            labelPosition="right"
+            content="Yes"
+            onClick={this.deleteContent.bind(this, currentPage, id)}
+          />
         </Modal>
       </Fragment>
     );
@@ -113,7 +138,16 @@ export default class InfoCards extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  state
+});
+
 export { InfoCards as InfoCardsPage };
+export default connect(
+  mapStateToProps,
+  { deleteProductCategory, deleteProduct, deleteStoreAttendant }
+)(InfoCards);
+
 InfoCards.propTypes = {
   currentPage: PropTypes.string,
   imageUrl: PropTypes.string,

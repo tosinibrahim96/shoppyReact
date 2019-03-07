@@ -22,6 +22,24 @@ const initialState = {
     success: false,
     successResponse: [],
     failureResponse: ''
+  },
+  deleteAttendant: {
+    deleteAttendantLoading: false,
+    success: false,
+    successResponse: '',
+    failureResponse: ''
+  },
+  deleteCategory: {
+    deleteCategoryLoading: false,
+    success: false,
+    successResponse: '',
+    failureResponse: ''
+  },
+  deleteProduct: {
+    deleteProductLoading: false,
+    success: false,
+    successResponse: '',
+    failureResponse: ''
   }
 };
 

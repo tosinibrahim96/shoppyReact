@@ -11,13 +11,10 @@ exports[`Test the Category Component should match snapshot 1`] = `
 <Navbar
   displayPage={
     Array [
-      <InfoCards
+      <Connect(InfoCards)
         currentPage="category"
-        description=""
+        id="1"
         imageUrl="imageurl"
-        mobileNumber=""
-        nameToDisplay=""
-        userRole=""
       />,
     ]
   }

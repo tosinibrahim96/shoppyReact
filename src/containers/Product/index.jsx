@@ -32,6 +32,7 @@ class Product extends Component {
           }) => (
             <ProductComponent
               key={product_id}
+              id={product_id}
               nameToDisplay={product_name}
               imageUrl={product_image_url}
               currentPage="product"

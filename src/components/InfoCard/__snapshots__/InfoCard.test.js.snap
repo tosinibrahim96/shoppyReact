@@ -47,6 +47,7 @@ exports[`Test the AdminCards Component should match snapshot 1`] = `
         Object {
           "currentPage": "product",
           "description": "",
+          "id": 5,
           "imageUrl": "",
           "mobileNumber": "",
           "nameToDisplay": "",
@@ -113,6 +114,7 @@ exports[`Test the AdminCards Component should match snapshot 1`] = `
       content="Yes"
       icon="checkmark"
       labelPosition="right"
+      onClick={[Function]}
       positive={true}
     />
   </Modal>

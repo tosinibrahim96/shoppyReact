@@ -11,13 +11,8 @@ exports[`Test the Product Component should match snapshot 1`] = `
 <Navbar
   displayPage={
     Array [
-      <InfoCards
+      <Connect(InfoCards)
         currentPage="product"
-        description=""
-        imageUrl=""
-        mobileNumber=""
-        nameToDisplay=""
-        userRole=""
       />,
     ]
   }

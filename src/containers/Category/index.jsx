@@ -22,6 +22,7 @@ class Category extends Component {
         displayPage={successResponse.map(({ id, name, image_url, short_desc }) => (
           <CategoryComponent
             key={id}
+            id={id}
             nameToDisplay={name}
             imageUrl={image_url}
             currentPage="category"

@@ -24,6 +24,7 @@ class Attendant extends Component {
         displayPage={successResponse.map(({ id, email, image_url, mobile_number, first_name }) => (
           <AttendantComponent
             key={id}
+            id={id}
             nameToDisplay={first_name}
             imageUrl={image_url}
             currentPage="attendant"
