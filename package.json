@@ -108,7 +108,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.1",
     "image-webpack-loader": "^4.6.0",
-    "jest": "^24.0.0",
+    "jest": "24.1.0",
     "jest-html-reporter": "^2.4.4",
     "jest-localstorage-mock": "^2.4.0",
     "mini-css-extract-plugin": "^0.5.0",
