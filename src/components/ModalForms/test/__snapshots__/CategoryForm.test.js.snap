@@ -9,6 +9,7 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
     className="formField"
   >
     <input
+      defaultValue="John Doe"
       placeholder="Category Name"
     />
   </FormField>
@@ -16,6 +17,7 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
     className="formField"
   >
     <input
+      defaultValue="https://i.imgur.com/27DUH5b.jpg"
       placeholder="Image URL (example:https://exampleimageurl.jpg)"
       typeof="url"
     />
@@ -31,6 +33,7 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
     as={[Function]}
     className="formField"
     control={[Function]}
+    defaultValue="admin@mail.com"
     placeholder="Short Description"
   />
   <Button

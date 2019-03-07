@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import AdminCards from './index';
+import { shallow, mount } from 'enzyme';
+import InfoCardsPage from './index';
 
 describe('Test the AdminCards Component', () => {
   beforeEach(() => {
@@ -16,9 +16,9 @@ describe('Test the AdminCards Component', () => {
   it('should match snapshot', () => {
     const userRole = 'admin';
     const product = 'product';
-    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} />);
     wrapper.find('p').simulate('click');
-    expect(wrapper.state('open')).toBe(true);
+    expect(wrapper.state('open')).toBe(false);
     wrapper.instance().onCloseModal();
     wrapper.instance().onOpenModal();
     wrapper.instance().displayAdminButtons();
@@ -27,16 +27,51 @@ describe('Test the AdminCards Component', () => {
   it('should match snapshot', () => {
     const userRole = 'attendant';
     const product = 'product';
-    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Test the AdminCards Component', () => {
   it('should redirect to login', () => {
+    const props = {
+      nameToDisplay: 'John Doe',
+      imageUrl: 'https://i.imgur.com/27DUH5b.jpg',
+      description: 'admin@mail.com',
+      mobileNumber: '08076543241'
+    };
+    const userRole = 'admin';
+    const product = 'product';
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Test the AdminCards Component', () => {
+  it('should redirect to login', () => {
+    const props = {
+      nameToDisplay: 'John Doe',
+      imageUrl: 'https://i.imgur.com/27DUH5b.jpg',
+      description: 'admin@mail.com',
+      mobileNumber: '08076543241'
+    };
+
     const userRole = 'attendant';
     const product = 'product';
-    const wrapper = shallow(<AdminCards userRole={userRole} currentPage={product} />);
+    const wrapper = shallow(<InfoCardsPage userRole={userRole} currentPage={product} {...props} />);
+    wrapper.instance().displayAddToCartButton();
     expect(wrapper).toMatchSnapshot();
+  });
+  it('should stimulate on submit event', () => {
+    const props = {
+      nameToDisplay: 'John Doe',
+      imageUrl: 'https://i.imgur.com/27DUH5b.jpg',
+      description: 'admin@mail.com',
+      mobileNumber: '08076543241'
+    };
+    const wrapper = shallow(<InfoCardsPage {...props} />);
+    wrapper.instance().openDeleteModal();
+    wrapper.instance().closeDeleteModal();
+    expect(wrapper.state('deleteOpen')).toBe(false);
   });
 });

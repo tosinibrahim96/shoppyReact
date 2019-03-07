@@ -5,10 +5,12 @@
   margin-top: 64px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 600px) {
   .pageContent {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    margin-top: 64px;
   }
 }

@@ -1,16 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test the Attendant Component should match snapshot 1`] = `
+<Redirect
+  push={false}
+  to="/login"
+/>
+`;
+
 exports[`Test the Category Component should match snapshot 1`] = `
 <Navbar
   displayPage={
-    <InfoCards
-      currentPage="category"
-      description="this is a category description"
-      imageUrl="https://i.imgur.com/UBDlxxg.jpg"
-      mobileNumber=""
-      nameToDisplay="categoryName"
-      userRole=""
-    />
+    Array [
+      <InfoCards
+        currentPage="category"
+        description=""
+        imageUrl="imageurl"
+        mobileNumber=""
+        nameToDisplay=""
+        userRole=""
+      />,
+    ]
   }
 />
 `;

@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import AttendantComponent from '../../components/InfoCard';
 import { getUserInfo } from '../../helpers/jwtHelper';
+import { storeAttendants } from '../../actions/getAttendantsAction';
 import Unauthorized from '../../components/Unauthorized';
 
-export default class Attendant extends Component {
+class Attendant extends Component {
+  componentDidMount = () => {
+    this.props.storeAttendants();
+  };
+
   render() {
+    const { successResponse } = this.props.allAttendants;
     const result = getUserInfo();
     if (!result) {
       return <Redirect to="/login" />;
@@ -14,19 +21,30 @@ export default class Attendant extends Component {
 
     return result.userRole === 'admin' ? (
       <Navbar
-        displayPage={(
+        displayPage={successResponse.map(({ id, email, image_url, mobile_number, first_name }) => (
           <AttendantComponent
-            nameToDisplay="attendantName"
-            imageUrl="https://i.imgur.com/344U6oc.jpg"
+            key={id}
+            nameToDisplay={first_name}
+            imageUrl={image_url}
             currentPage="attendant"
-            description="attendant@mail.com"
-            mobileNumber="08034563432"
+            description={email}
+            mobileNumber={mobile_number}
             userRole={result.userRole}
           />
-)}
+        ))}
       />
     ) : (
       <Unauthorized />
     );
   }
 }
+
+const mapStateToProps = state => ({
+  allAttendants: state.allAttendants
+});
+
+export { Attendant as AttendantPage };
+export default connect(
+  mapStateToProps,
+  { storeAttendants }
+)(Attendant);

@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Product from './index';
+import { ProductPage } from './index';
+import { getAllProducts } from '../../actions/getProductsAction';
+import { getUserInfo } from '../../helpers/jwtHelper';
 
 describe('Test the Product Component', () => {
   beforeAll(() => {
@@ -13,7 +15,44 @@ describe('Test the Product Component', () => {
     localStorage.removeItem('Authentication');
   });
   it('should match snapshot', () => {
-    const wrapper = shallow(<Product />);
+    const allProducts = {
+      successResponse: [
+        {
+          id: '1',
+          email: 's@mail.com',
+          image_url: 'imageurl',
+          first_name: 'welcome'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <ProductPage getAllProducts={getAllProducts} allProducts={allProducts} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Test the Attendant Component', () => {
+  beforeAll(() => {});
+  afterEach(() => {
+    localStorage.removeItem('Authentication');
+  });
+  it('should match snapshot', () => {
+    const result = getUserInfo();
+    const allProducts = {
+      successResponse: [
+        {
+          id: '1',
+          email: 's@mail.com',
+          image_url: 'imageurl',
+          first_name: 'welcome'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <ProductPage getAllProducts={getAllProducts} allProducts={allProducts} />
+    );
+    expect(result).toBeNull();
     expect(wrapper).toMatchSnapshot();
   });
 });

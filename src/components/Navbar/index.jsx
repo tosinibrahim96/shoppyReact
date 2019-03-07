@@ -39,10 +39,18 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  displayPage: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object]).isRequired,
-  userRole: PropTypes.string.isRequired
+  displayPage: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  userRole: PropTypes.string
 };
 
-Navbar.defaultProps = {};
+Navbar.defaultProps = {
+  displayPage: [] || {} || '',
+  userRole: ''
+};
 
 export default Navbar;

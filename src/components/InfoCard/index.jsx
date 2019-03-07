@@ -9,7 +9,8 @@ import './InfoCard.scss';
 
 export default class InfoCards extends Component {
   state = {
-    open: false
+    open: false,
+    deleteOpen: false
   };
 
   onOpenModal = () => {
@@ -20,14 +21,22 @@ export default class InfoCards extends Component {
     this.setState({ open: false });
   };
 
+  openDeleteModal = () => {
+    this.setState({ deleteOpen: true });
+  };
+
+  closeDeleteModal = () => {
+    this.setState({ deleteOpen: false });
+  };
+
   displayAdminButtons = (userRole) => {
     if (userRole === 'admin') {
       return (
         <div className="ui two buttons adminActions">
-          <Button basic color="green">
+          <Button basic color="green" onClick={this.onOpenModal}>
             Edit
           </Button>
-          <Button basic color="red">
+          <Button basic color="red" onClick={this.openDeleteModal}>
             Delete
           </Button>
         </div>
@@ -71,35 +80,40 @@ export default class InfoCards extends Component {
     );
   };
 
-  displayAddInfoButton = (userRole) => {
-    if (userRole === 'admin') {
-      return (
-        <p role="presentation" className="adminCardsP" onClick={this.onOpenModal}>
-          {`Add new ${this.props.currentPage}`}
-        </p>
-      );
-    }
+  displayModals = () => {
+    const { open, deleteOpen } = this.state;
+    return (
+      <Fragment>
+        <Modal open={open} onClose={this.onCloseModal} center>
+          {selectModalForm(this.props.currentPage, this.props)}
+        </Modal>
+        <Modal open={deleteOpen} onClose={this.closeDeleteModal} center>
+          <p className="confirmDelete">
+            {`Are You Sure You want to delete this ${this.props.currentPage}`}
+          </p>
+          <Button negative className="noDelete" onClick={this.closeDeleteModal}>
+            No
+          </Button>
+          <Button positive icon="checkmark" labelPosition="right" content="Yes" />
+        </Modal>
+      </Fragment>
+    );
   };
 
   render() {
-    const { open } = this.state;
-    const { userRole } = this.props;
     const userInfo = getUserInfo();
     return !userInfo ? (
       <Redirect to="/login" />
     ) : (
       <Fragment>
-        {this.displayAddInfoButton(userRole)}
-
-        <Modal open={open} onClose={this.onCloseModal} center>
-          {selectModalForm(this.props.currentPage)}
-        </Modal>
+        {this.displayModals()}
         <div className="categoryCardContainer">{this.createCard()}</div>
       </Fragment>
     );
   }
 }
 
+export { InfoCards as InfoCardsPage };
 InfoCards.propTypes = {
   currentPage: PropTypes.string,
   imageUrl: PropTypes.string,

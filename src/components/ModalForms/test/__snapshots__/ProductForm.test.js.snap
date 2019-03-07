@@ -10,13 +10,26 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
   >
     <input
       placeholder="Product Name"
+      value="John Doe"
     />
   </FormField>
   <FormField
     className="formField"
   >
     <Select
-      options={Array []}
+      onClick={[Function]}
+      options={
+        Array [
+          Object {
+            "text": "categoryname1",
+            "value": 2,
+          },
+          Object {
+            "text": "categoryname1",
+            "value": 2,
+          },
+        ]
+      }
       placeholder="Select a Category"
     />
   </FormField>
@@ -26,6 +39,7 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     <input
       placeholder="Image URL (example:https://exampleimageurl.jpg)"
       typeof="url"
+      value="https://i.imgur.com/27DUH5b.jpg"
     />
     <a
       href="https://imgur.com/"
@@ -41,6 +55,7 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     <input
       placeholder="Price"
       typeof="number"
+      value={300}
     />
   </FormField>
   <FormField
@@ -49,6 +64,7 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     <input
       placeholder="Quantity"
       typeof="number"
+      value={3}
     />
   </FormField>
   <FormTextArea
@@ -56,6 +72,7 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     className="formField"
     control={[Function]}
     placeholder="Short Description"
+    value="admin@mail.com"
   />
   <Button
     as="button"
