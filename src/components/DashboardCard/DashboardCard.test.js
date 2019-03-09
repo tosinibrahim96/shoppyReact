@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { InfoCardPage } from './index';
 import { productCategories } from '../../actions/getCategoriesAction';
 import { getAllProducts } from '../../actions/getProductsAction';
@@ -20,7 +20,7 @@ describe('Test the DasboardCard Component', () => {
   const allProducts = { successResponse: { length: 0 } };
   const allAttendants = { successResponse: { length: 0 } };
   it('should match snapshot', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <InfoCardPage
         productCategories={productCategories}
         getAllProducts={getAllProducts}
@@ -40,7 +40,7 @@ describe('Test the DasboardCard Component', () => {
     const allCategories = { successResponse: { length: 3 } };
     const allProducts = { successResponse: { length: 3 } };
     const allAttendants = { successResponse: { length: 3 } };
-    const wrapper = mount(
+    const wrapper = shallow(
       <InfoCardPage
         productCategories={productCategories}
         getAllProducts={getAllProducts}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Category from './index';
+import { CategoryPage } from './index';
+import { productCategories } from '../../actions/getCategoriesAction';
+import { getUserInfo } from '../../helpers/jwtHelper';
 
 describe('Test the Category Component', () => {
   beforeAll(() => {
@@ -13,7 +15,44 @@ describe('Test the Category Component', () => {
     localStorage.removeItem('Authentication');
   });
   it('should match snapshot', () => {
-    const wrapper = shallow(<Category />);
+    const allCategories = {
+      successResponse: [
+        {
+          id: '1',
+          email: 's@mail.com',
+          image_url: 'imageurl',
+          first_name: 'welcome'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <CategoryPage productCategories={productCategories} allCategories={allCategories} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Test the Attendant Component', () => {
+  beforeAll(() => {});
+  afterEach(() => {
+    localStorage.removeItem('Authentication');
+  });
+  it('should match snapshot', () => {
+    const result = getUserInfo();
+    const allCategories = {
+      successResponse: [
+        {
+          id: '1',
+          email: 's@mail.com',
+          image_url: 'imageurl',
+          first_name: 'welcome'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <CategoryPage productCategories={productCategories} allCategories={allCategories} />
+    );
+    expect(result).toBeNull();
     expect(wrapper).toMatchSnapshot();
   });
 });

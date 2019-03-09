@@ -3,5 +3,5 @@ import Navbar from '../Navbar';
 import DashboardCard from '../../components/DashboardCard';
 
 export default function Home() {
-  return <Navbar displayPage={<DashboardCard />} />;
+  return <Navbar displayPage={<DashboardCard />} currentPage="dashboard" />;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Navbar from './index';
+import InfoCard from '../../components/InfoCard';
 
 describe('Test the Navbar Component', () => {
   beforeAll(() => {
@@ -14,7 +15,7 @@ describe('Test the Navbar Component', () => {
   });
   it('should match snapshot', () => {
     const userRole = 'admin';
-    const wrapper = shallow(<Navbar displayPage={Navbar} userRole={userRole} />);
+    const wrapper = shallow(<Navbar displayPage={InfoCard} userRole={userRole} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

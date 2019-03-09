@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the Attendant Component should match snapshot 1`] = `<Unauthorized />`;
+exports[`Test the Attendant Component should match snapshot 1`] = `
+<Dimmer
+  active={true}
+  inverted={true}
+>
+  <Loader
+    size="large"
+  >
+    Attendants Records Loading
+  </Loader>
+</Dimmer>
+`;
+
+exports[`Test the Attendant Component should match snapshot 2`] = `
+<Redirect
+  push={false}
+  to="/login"
+/>
+`;

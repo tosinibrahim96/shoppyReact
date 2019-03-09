@@ -10,7 +10,11 @@ export default class Navbar extends Component {
     return userInfo === null ? (
       <Redirect to="/login" />
     ) : (
-      <NavbarComponent userRole={userInfo.userRole} displayPage={this.props.displayPage} />
+      <NavbarComponent
+        userRole={userInfo.userRole}
+        displayPage={this.props.displayPage}
+        currentPage={this.props.currentPage}
+      />
     );
   }
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default class NavLinks extends Component {
   handleLogout = () => {
     localStorage.removeItem('Authentication');
+    window.location.reload();
   };
 
   displayCorrectSidebar = (role) => {

@@ -4,44 +4,60 @@ exports[`Test the AttendantForm Component should match snapshot 1`] = `
 <Form
   as="form"
   className="modalForm"
+  onSubmit={[Function]}
 >
   <FormField
     className="formField"
   >
     <input
+      name="email"
+      onChange={[Function]}
       placeholder="Email"
       typeof="email"
+      value=""
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
+      name="password"
+      onChange={[Function]}
       placeholder="Password"
       typeof="password"
+      value=""
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
+      name="first_name"
+      onChange={[Function]}
       placeholder="Attendant Name"
+      value=""
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
+      name="mobile_number"
+      onChange={[Function]}
       placeholder="Mobile Number"
       typeof="tel"
+      value=""
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
+      name="image_url"
+      onChange={[Function]}
       placeholder="Image URL (example:https://exampleimageurl.jpg)"
       typeof="url"
+      value=""
     />
     <a
       href="https://imgur.com/"

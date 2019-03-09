@@ -31,6 +31,7 @@
         "ignoreClassFields": true
       }
     ],
+    "react/jsx-no-bind": 0,
     "import/no-unresolved": [
       2,
       {
@@ -51,6 +52,7 @@
         "allow": ["req", "res", "err"]
       }
     ],
+    "camelcase": [0, { "properties": "never" }],
     "react/prop-types": 0,
     "jsx-a11y/label-has-associated-control": 0,
     "jsx-a11y/label-has-for": 0,

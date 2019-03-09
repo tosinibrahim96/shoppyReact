@@ -1,6 +1,7 @@
 .categoryCardContainer {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .categoryCard.ui.card {
@@ -45,18 +46,22 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 580px) {
-  .categoryCard.ui.card {
-    width: 60%;
-  }
-  .adminCardsP {
-    width: 30%;
-  }
+p:first-child.confirmDelete {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.ui.negative.button.noDelete {
+  margin: 10%;
 }
 
 @media (min-width: 600px) {
-  .categoryCard.ui.card {
+  .categoryCardContainer {
     width: 45%;
+    margin-bottom: 3%;
+  }
+  .categoryCard.ui.card {
+    width: 100%;
   }
   .adminCardsP {
     width: 25%;
@@ -64,9 +69,12 @@
 }
 
 @media (min-width: 800px) {
+  .categoryCardContainer {
+    width: 33.333%;
+    margin-bottom: 3%;
+  }
   .categoryCard.ui.card {
-    width: 30%;
-    height: 85%;
+    width: 80%;
   }
   .adminCardsP {
     width: 15%;
