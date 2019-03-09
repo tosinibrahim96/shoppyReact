@@ -12,12 +12,6 @@ exports[`Test the Navbar Component should match snapshot 1`] = `
     show={false}
     userRole="attendant"
   />
-  <Button
-    as="button"
-    onClick={[Function]}
-  >
-    Add new undefined
-  </Button>
   <Modal
     animationDuration={500}
     blockScroll={true}
