@@ -45,7 +45,7 @@ class Navbar extends Component {
         />
         <SideDrawer show={this.state.sideDrawerOpen} userRole={this.props.userRole} />
         {backdrop}
-        {this.props.currentPage === 'dashboard' ? (
+        {this.props.currentPage === 'dashboard' || this.props.userRole === 'attendant' ? (
           ''
         ) : (
           <Button onClick={this.onOpenModal}>{`Add new ${this.props.currentPage}`}</Button>
