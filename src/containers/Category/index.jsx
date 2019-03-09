@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { Dimmer, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import CategoryComponent from '../../components/InfoCard';
@@ -12,10 +13,17 @@ class Category extends Component {
   };
 
   render() {
-    const { successResponse } = this.props.allCategories;
+    const { successResponse, categoriesLoading } = this.props.allCategories;
     const result = getUserInfo();
     if (!result) {
       return <Redirect to="/login" />;
+    }
+    if (categoriesLoading) {
+      return (
+        <Dimmer active inverted>
+          <Loader size="large">Categories Records Loading</Loader>
+        </Dimmer>
+      );
     }
     return (
       <Navbar
@@ -30,6 +38,7 @@ class Category extends Component {
             userRole={result.userRole}
           />
         ))}
+        currentPage="category"
       />
     );
   }

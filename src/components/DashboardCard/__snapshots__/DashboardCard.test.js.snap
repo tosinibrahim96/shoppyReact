@@ -1,33 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test the DasboardCard Component should match snapshot 1`] = `
-<InfoCard
-  allAttendants={
-    Object {
-      "successResponse": Object {
-        "length": 0,
-      },
-    }
-  }
-  allCategories={
-    Object {
-      "successResponse": Object {
-        "length": 0,
-      },
-    }
-  }
-  allProducts={
-    Object {
-      "successResponse": Object {
-        "length": 0,
-      },
-    }
-  }
-  getAllProducts={[Function]}
-  getAllSales={[Function]}
-  productCategories={[Function]}
-  storeAttendants={[Function]}
->
+<Fragment>
   <div
     className="card"
     key="0"
@@ -43,53 +17,34 @@ exports[`Test the DasboardCard Component should match snapshot 1`] = `
       <Card
         className="infoCard"
       >
-        <div
-          className="ui card infoCard"
-          onClick={[Function]}
+        <h1
+          className="numberOfItems"
         >
-          <h1
-            className="numberOfItems"
-          >
-            0
-          </h1>
+          0
+        </h1>
+        <Link
+          replace={false}
+          to="/categories"
+        >
           <Button
             animated={true}
             as="button"
           >
-            <button
-              className="ui animated button"
-              onClick={[Function]}
+            <ButtonContent
+              visible={true}
             >
-              <ButtonContent
-                visible={true}
-              >
-                <div
-                  className="visible content"
-                >
-                  View All
-                </div>
-              </ButtonContent>
-              <ButtonContent
-                hidden={true}
-              >
-                <div
-                  className="hidden content"
-                >
-                  <Icon
-                    as="i"
-                    name="arrow right"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="arrow right icon"
-                      onClick={[Function]}
-                    />
-                  </Icon>
-                </div>
-              </ButtonContent>
-            </button>
+              View All
+            </ButtonContent>
+            <ButtonContent
+              hidden={true}
+            >
+              <Icon
+                as="i"
+                name="arrow right"
+              />
+            </ButtonContent>
           </Button>
-        </div>
+        </Link>
       </Card>
     </div>
   </div>
@@ -108,87 +63,42 @@ exports[`Test the DasboardCard Component should match snapshot 1`] = `
       <Card
         className="infoCard"
       >
-        <div
-          className="ui card infoCard"
-          onClick={[Function]}
+        <h1
+          className="numberOfItems"
         >
-          <h1
-            className="numberOfItems"
-          >
-            0
-          </h1>
+          0
+        </h1>
+        <Link
+          replace={false}
+          to="/products"
+        >
           <Button
             animated={true}
             as="button"
           >
-            <button
-              className="ui animated button"
-              onClick={[Function]}
+            <ButtonContent
+              visible={true}
             >
-              <ButtonContent
-                visible={true}
-              >
-                <div
-                  className="visible content"
-                >
-                  View All
-                </div>
-              </ButtonContent>
-              <ButtonContent
-                hidden={true}
-              >
-                <div
-                  className="hidden content"
-                >
-                  <Icon
-                    as="i"
-                    name="arrow right"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="arrow right icon"
-                      onClick={[Function]}
-                    />
-                  </Icon>
-                </div>
-              </ButtonContent>
-            </button>
+              View All
+            </ButtonContent>
+            <ButtonContent
+              hidden={true}
+            >
+              <Icon
+                as="i"
+                name="arrow right"
+              />
+            </ButtonContent>
           </Button>
-        </div>
+        </Link>
       </Card>
     </div>
   </div>
-</InfoCard>
+</Fragment>
 `;
 
 exports[`Test the DasboardCard Component should match snapshot 2`] = `
-<InfoCard
-  allAttendants={
-    Object {
-      "successResponse": Object {
-        "length": 3,
-      },
-    }
-  }
-  allCategories={
-    Object {
-      "successResponse": Object {
-        "length": 3,
-      },
-    }
-  }
-  allProducts={
-    Object {
-      "successResponse": Object {
-        "length": 3,
-      },
-    }
-  }
-  getAllProducts={[Function]}
-  getAllSales={[Function]}
-  productCategories={[Function]}
-  storeAttendants={[Function]}
->
+<Fragment>
   <div
     className="card"
     key="0"
@@ -204,53 +114,34 @@ exports[`Test the DasboardCard Component should match snapshot 2`] = `
       <Card
         className="infoCard"
       >
-        <div
-          className="ui card infoCard"
-          onClick={[Function]}
+        <h1
+          className="numberOfItems"
         >
-          <h1
-            className="numberOfItems"
-          >
-            3
-          </h1>
+          3
+        </h1>
+        <Link
+          replace={false}
+          to="/categories"
+        >
           <Button
             animated={true}
             as="button"
           >
-            <button
-              className="ui animated button"
-              onClick={[Function]}
+            <ButtonContent
+              visible={true}
             >
-              <ButtonContent
-                visible={true}
-              >
-                <div
-                  className="visible content"
-                >
-                  View All
-                </div>
-              </ButtonContent>
-              <ButtonContent
-                hidden={true}
-              >
-                <div
-                  className="hidden content"
-                >
-                  <Icon
-                    as="i"
-                    name="arrow right"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="arrow right icon"
-                      onClick={[Function]}
-                    />
-                  </Icon>
-                </div>
-              </ButtonContent>
-            </button>
+              View All
+            </ButtonContent>
+            <ButtonContent
+              hidden={true}
+            >
+              <Icon
+                as="i"
+                name="arrow right"
+              />
+            </ButtonContent>
           </Button>
-        </div>
+        </Link>
       </Card>
     </div>
   </div>
@@ -269,53 +160,34 @@ exports[`Test the DasboardCard Component should match snapshot 2`] = `
       <Card
         className="infoCard"
       >
-        <div
-          className="ui card infoCard"
-          onClick={[Function]}
+        <h1
+          className="numberOfItems"
         >
-          <h1
-            className="numberOfItems"
-          >
-            3
-          </h1>
+          3
+        </h1>
+        <Link
+          replace={false}
+          to="/products"
+        >
           <Button
             animated={true}
             as="button"
           >
-            <button
-              className="ui animated button"
-              onClick={[Function]}
+            <ButtonContent
+              visible={true}
             >
-              <ButtonContent
-                visible={true}
-              >
-                <div
-                  className="visible content"
-                >
-                  View All
-                </div>
-              </ButtonContent>
-              <ButtonContent
-                hidden={true}
-              >
-                <div
-                  className="hidden content"
-                >
-                  <Icon
-                    as="i"
-                    name="arrow right"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="arrow right icon"
-                      onClick={[Function]}
-                    />
-                  </Icon>
-                </div>
-              </ButtonContent>
-            </button>
+              View All
+            </ButtonContent>
+            <ButtonContent
+              hidden={true}
+            >
+              <Icon
+                as="i"
+                name="arrow right"
+              />
+            </ButtonContent>
           </Button>
-        </div>
+        </Link>
       </Card>
     </div>
   </div>
@@ -334,55 +206,36 @@ exports[`Test the DasboardCard Component should match snapshot 2`] = `
       <Card
         className="infoCard"
       >
-        <div
-          className="ui card infoCard"
-          onClick={[Function]}
+        <h1
+          className="numberOfItems"
         >
-          <h1
-            className="numberOfItems"
-          >
-            3
-          </h1>
+          3
+        </h1>
+        <Link
+          replace={false}
+          to="/attendants"
+        >
           <Button
             animated={true}
             as="button"
           >
-            <button
-              className="ui animated button"
-              onClick={[Function]}
+            <ButtonContent
+              visible={true}
             >
-              <ButtonContent
-                visible={true}
-              >
-                <div
-                  className="visible content"
-                >
-                  View All
-                </div>
-              </ButtonContent>
-              <ButtonContent
-                hidden={true}
-              >
-                <div
-                  className="hidden content"
-                >
-                  <Icon
-                    as="i"
-                    name="arrow right"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="arrow right icon"
-                      onClick={[Function]}
-                    />
-                  </Icon>
-                </div>
-              </ButtonContent>
-            </button>
+              View All
+            </ButtonContent>
+            <ButtonContent
+              hidden={true}
+            >
+              <Icon
+                as="i"
+                name="arrow right"
+              />
+            </ButtonContent>
           </Button>
-        </div>
+        </Link>
       </Card>
     </div>
   </div>
-</InfoCard>
+</Fragment>
 `;

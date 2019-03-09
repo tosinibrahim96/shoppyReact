@@ -4,22 +4,27 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
 <Form
   as="form"
   className="modalForm"
+  onSubmit={[Function]}
 >
   <FormField
     className="formField"
   >
     <input
-      defaultValue="John Doe"
+      name="name"
+      onChange={[Function]}
       placeholder="Category Name"
+      value="pname"
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
-      defaultValue="https://i.imgur.com/27DUH5b.jpg"
+      name="image_url"
+      onChange={[Function]}
       placeholder="Image URL (example:https://exampleimageurl.jpg)"
       typeof="url"
+      value="https://i.imgur.com/27DUH5b.jpg"
     />
     <a
       href="https://imgur.com/"
@@ -33,8 +38,62 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
     as={[Function]}
     className="formField"
     control={[Function]}
-    defaultValue="admin@mail.com"
+    name="description"
+    onChange={[Function]}
     placeholder="Short Description"
+    value="admin@mail.com"
+  />
+  <Button
+    as="button"
+    type="submit"
+  >
+    Submit
+  </Button>
+</Form>
+`;
+
+exports[`Test the CategoryForm Component should match snapshot 2`] = `
+<Form
+  as="form"
+  className="modalForm"
+  onSubmit={[Function]}
+>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="Category Name"
+      value="pname"
+    />
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="image_url"
+      onChange={[Function]}
+      placeholder="Image URL (example:https://exampleimageurl.jpg)"
+      typeof="url"
+      value=""
+    />
+    <a
+      href="https://imgur.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Upload image here
+    </a>
+  </FormField>
+  <FormTextArea
+    as={[Function]}
+    className="formField"
+    control={[Function]}
+    name="description"
+    onChange={[Function]}
+    placeholder="Short Description"
+    value=""
   />
   <Button
     as="button"

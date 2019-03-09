@@ -10,6 +10,8 @@ describe('Test the Attendant Component', () => {
       'Authentication',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlMb2FkIjp7ImlkIjoiN2NhM2JjYzktZTMzOS00OTcwLTk0YjMtYjI5YTg1N2ViM2ExIiwicm9sZSI6W119LCJpYXQiOjE1NTE0NjE4OTcsImV4cCI6MTU1MTU0ODI5N30.IzGf0L_pH9W_gN2AC2Ee5aWqwSO4l3fa46ZrcyUbMKU'
     );
+    const result = getUserInfo();
+    result.userRole = 'admin';
   });
   afterEach(() => {
     localStorage.removeItem('Authentication');
@@ -24,12 +26,12 @@ describe('Test the Attendant Component', () => {
           mobile_number: '09085674565',
           first_name: 'welcome'
         }
-      ]
+      ],
+      allAttendantsLoading: true
     };
     const wrapper = shallow(
       <AttendantPage storeAttendants={storeAttendants} allAttendants={allAttendants} />
     );
-
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -40,7 +42,6 @@ describe('Test the Attendant Component', () => {
     localStorage.removeItem('Authentication');
   });
   it('should match snapshot', () => {
-    const result = getUserInfo();
     const allAttendants = {
       successResponse: [
         {
@@ -50,12 +51,13 @@ describe('Test the Attendant Component', () => {
           mobile_number: '09085674565',
           first_name: 'welcome'
         }
-      ]
+      ],
+      allAttendantsLoading: false
     };
     const wrapper = shallow(
       <AttendantPage storeAttendants={storeAttendants} allAttendants={allAttendants} />
     );
-    expect(result).toBeNull();
+
     expect(wrapper).toMatchSnapshot();
   });
 });

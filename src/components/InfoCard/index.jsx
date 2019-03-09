@@ -8,6 +8,9 @@ import selectModalForm from '../../helpers/SelectModalForm';
 import { deleteProductCategory } from '../../actions/deleteCategoryAction';
 import { deleteProduct } from '../../actions/deleteProductAction';
 import { deleteStoreAttendant } from '../../actions/deleteAttendantAction';
+import { storeAttendants } from '../../actions/getAttendantsAction';
+import { productCategories } from '../../actions/getCategoriesAction';
+import { getAllProducts } from '../../actions/getProductsAction';
 import { getUserInfo } from '../../helpers/jwtHelper';
 import './InfoCard.scss';
 
@@ -33,13 +36,17 @@ class InfoCards extends Component {
     this.setState({ deleteOpen: false });
   };
 
-  displayAdminButtons = (userRole) => {
+  displayAdminButtons = (userRole, currentPage) => {
     if (userRole === 'admin') {
       return (
         <div className="ui two buttons adminActions">
-          <Button basic color="green" onClick={this.onOpenModal}>
-            Edit
-          </Button>
+          {currentPage === 'attendant' ? (
+            ''
+          ) : (
+            <Button basic color="green" onClick={this.onOpenModal}>
+              Edit
+            </Button>
+          )}
           <Button basic color="red" onClick={this.openDeleteModal}>
             Delete
           </Button>
@@ -68,7 +75,9 @@ class InfoCards extends Component {
       description,
       mobileNumber,
       userRole,
-      currentPage
+      currentPage,
+      productPrice,
+      categoryName
     } = this.props;
     return (
       <Card className="categoryCard">
@@ -77,7 +86,11 @@ class InfoCards extends Component {
           <Card.Header className="adminCardTitle">{nameToDisplay}</Card.Header>
           <Card.Description className="adminCardDescription">{description}</Card.Description>
           <Card.Description className="adminCardDescription">{mobileNumber}</Card.Description>
-          {this.displayAdminButtons(userRole)}
+          <Card.Description className="adminCardDescription">
+            {productPrice ? `$${productPrice}` : ''}
+          </Card.Description>
+          <Card.Description className="adminCardDescription">{categoryName}</Card.Description>
+          {this.displayAdminButtons(userRole, currentPage)}
           {this.displayAddToCartButton(currentPage, userRole)}
         </Card.Content>
       </Card>
@@ -88,12 +101,15 @@ class InfoCards extends Component {
     switch (currentPage) {
       case 'category':
         this.props.deleteProductCategory(componentId);
+        setTimeout(() => this.props.productCategories(), 500);
         break;
       case 'product':
         this.props.deleteProduct(componentId);
+        setTimeout(() => this.props.getAllProducts(), 500);
         break;
       case 'attendant':
         this.props.deleteStoreAttendant(componentId);
+        setTimeout(() => this.props.storeAttendants(), 500);
         break;
       default:
         break;
@@ -145,7 +161,14 @@ const mapStateToProps = state => ({
 export { InfoCards as InfoCardsPage };
 export default connect(
   mapStateToProps,
-  { deleteProductCategory, deleteProduct, deleteStoreAttendant }
+  {
+    deleteProductCategory,
+    deleteProduct,
+    deleteStoreAttendant,
+    productCategories,
+    storeAttendants,
+    getAllProducts
+  }
 )(InfoCards);
 
 InfoCards.propTypes = {

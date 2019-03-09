@@ -2,6 +2,7 @@
 
 exports[`Test the Home Component should match snapshot 1`] = `
 <Navbar
-  displayPage={<Connect(withRouter(InfoCard)) />}
+  currentPage="dashboard"
+  displayPage={<Connect(InfoCard) />}
 />
 `;

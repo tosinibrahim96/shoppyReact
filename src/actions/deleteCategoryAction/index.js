@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import actionTypes from './actionTypes';
 import request from '../../helpers/axiosHelper/deleteCategoryRequest';
 
@@ -22,6 +23,7 @@ const deleteProductCategory = categoryId => async (dispatch) => {
     dispatch(deleteCategoryLoading(DELETE_CATEGORY_LOADING));
     const response = await request.deleteCategoryRequest(categoryId);
     dispatch(deleteCategorySuccess(response.data.Message));
+    toast.success('Category deleted successfully');
   } catch (error) {
     dispatch(deleteCategoryFailure(error.response.data.message));
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { Dimmer, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import AttendantComponent from '../../components/InfoCard';
@@ -13,12 +14,18 @@ class Attendant extends Component {
   };
 
   render() {
-    const { successResponse } = this.props.allAttendants;
+    const { successResponse, allAttendantsLoading } = this.props.allAttendants;
     const result = getUserInfo();
     if (!result) {
       return <Redirect to="/login" />;
     }
-
+    if (allAttendantsLoading) {
+      return (
+        <Dimmer active inverted>
+          <Loader size="large">Attendants Records Loading</Loader>
+        </Dimmer>
+      );
+    }
     return result.userRole === 'admin' ? (
       <Navbar
         displayPage={successResponse.map(({ id, email, image_url, mobile_number, first_name }) => (
@@ -33,6 +40,7 @@ class Attendant extends Component {
             userRole={result.userRole}
           />
         ))}
+        currentPage="attendant"
       />
     ) : (
       <Unauthorized />

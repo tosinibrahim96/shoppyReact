@@ -141,6 +141,12 @@ exports[`Test the AdminCards Component should match snapshot 1`] = `
         <CardDescription
           className="adminCardDescription"
         />
+        <CardDescription
+          className="adminCardDescription"
+        />
+        <CardDescription
+          className="adminCardDescription"
+        />
         <Button
           animated={true}
           as="button"

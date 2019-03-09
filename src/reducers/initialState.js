@@ -40,6 +40,36 @@ const initialState = {
     success: false,
     successResponse: '',
     failureResponse: ''
+  },
+  updateCategory: {
+    updateCategoryLoading: false,
+    success: false,
+    successResponse: '',
+    failureResponse: ''
+  },
+  updateProduct: {
+    updateProductLoading: false,
+    success: false,
+    successResponse: '',
+    failureResponse: ''
+  },
+  addAttendant: {
+    addAttendantLoading: false,
+    success: false,
+    successResponse: [],
+    failureResponse: ''
+  },
+  addCategory: {
+    addCategoryLoading: false,
+    success: false,
+    successResponse: [],
+    failureResponse: ''
+  },
+  addProduct: {
+    addProductLoading: false,
+    success: false,
+    successResponse: [],
+    failureResponse: ''
   }
 };
 

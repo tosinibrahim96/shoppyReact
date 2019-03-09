@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import actionTypes from './actionTypes';
 import request from '../../helpers/axiosHelper/deleteAttendantRequest';
 
@@ -26,6 +27,7 @@ const deleteStoreAttendant = attendantId => async (dispatch) => {
     dispatch(deleteAttendantLoading(DELETE_ATTENDANT_LOADING));
     const response = await request.deleteAttendantRequest(attendantId);
     dispatch(deleteAttendantSuccess(response.data.Message));
+    toast.success('Attendant deleted successfully');
   } catch (error) {
     dispatch(deleteAttendantFailure(error.response.data.message));
   }

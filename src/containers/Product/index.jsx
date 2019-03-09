@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { Dimmer, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import Navbar from '../Navbar';
 import ProductComponent from '../../components/InfoCard';
@@ -12,10 +13,17 @@ class Product extends Component {
   };
 
   render() {
-    const { successResponse } = this.props.allProducts;
+    const { successResponse, productsLoading } = this.props.allProducts;
     const result = getUserInfo();
     if (!result) {
       return <Redirect to="/login" />;
+    }
+    if (productsLoading) {
+      return (
+        <Dimmer active inverted>
+          <Loader size="large">Products Records Loading</Loader>
+        </Dimmer>
+      );
     }
     return (
       <Navbar
@@ -45,6 +53,7 @@ class Product extends Component {
             />
           )
         )}
+        currentPage="product"
       />
     );
   }

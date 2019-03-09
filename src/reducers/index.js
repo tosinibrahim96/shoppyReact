@@ -6,6 +6,11 @@ import allAttendants from './getAttendantsReducer';
 import deleteAttendant from './deleteAttendantReducer';
 import deleteCategory from './deleteCategoryReducer';
 import deleteProduct from './deleteProductReducer';
+import updateCategory from './updateCategoryReducer';
+import updateProduct from './updateProductReducer';
+import addAttendant from './addAttendantReducer';
+import addCategory from './addCategoryReducer';
+import addProduct from './addProductReducer';
 
 const rootReducer = combineReducers({
   userLogin,
@@ -14,7 +19,12 @@ const rootReducer = combineReducers({
   allAttendants,
   deleteAttendant,
   deleteCategory,
-  deleteProduct
+  deleteProduct,
+  updateCategory,
+  updateProduct,
+  addAttendant,
+  addCategory,
+  addProduct
 });
 
 export default rootReducer;

@@ -4,19 +4,24 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
 <Form
   as="form"
   className="modalForm"
+  onSubmit={[Function]}
 >
   <FormField
     className="formField"
   >
     <input
+      name="name"
+      onChange={[Function]}
       placeholder="Product Name"
-      value="John Doe"
+      value="pname"
     />
   </FormField>
   <FormField
     className="formField"
   >
     <Select
+      name="category_id"
+      onChange={[Function]}
       onClick={[Function]}
       options={
         Array [
@@ -31,12 +36,113 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
         ]
       }
       placeholder="Select a Category"
+      value={5}
     />
   </FormField>
   <FormField
     className="formField"
   >
     <input
+      name="image_url"
+      onChange={[Function]}
+      placeholder="Image URL (example:https://exampleimageurl.jpg)"
+      typeof="url"
+      value=""
+    />
+    <a
+      href="https://imgur.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Upload image here
+    </a>
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="price"
+      onChange={[Function]}
+      placeholder="Price"
+      typeof="number"
+      value=""
+    />
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="quantity"
+      onChange={[Function]}
+      placeholder="Quantity"
+      typeof="number"
+      value=""
+    />
+  </FormField>
+  <FormTextArea
+    as={[Function]}
+    className="formField"
+    control={[Function]}
+    name="description"
+    onChange={[Function]}
+    placeholder="Short Description"
+    value=""
+  />
+  <Button
+    as="button"
+    type="submit"
+  >
+    Submit
+  </Button>
+</Form>
+`;
+
+exports[`Test the ProductForm Component should match snapshot 2`] = `
+<Form
+  as="form"
+  className="modalForm"
+  onSubmit={[Function]}
+>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="Product Name"
+      value="pname"
+    />
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <Select
+      name="category_id"
+      onChange={[Function]}
+      onClick={[Function]}
+      options={
+        Array [
+          Object {
+            "text": "categoryname1",
+            "value": 2,
+          },
+          Object {
+            "text": "categoryname1",
+            "value": 2,
+          },
+        ]
+      }
+      placeholder="Select a Category"
+      text="textXontent"
+      value={9}
+    />
+  </FormField>
+  <FormField
+    className="formField"
+  >
+    <input
+      name="image_url"
+      onChange={[Function]}
       placeholder="Image URL (example:https://exampleimageurl.jpg)"
       typeof="url"
       value="https://i.imgur.com/27DUH5b.jpg"
@@ -53,6 +159,8 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     className="formField"
   >
     <input
+      name="price"
+      onChange={[Function]}
       placeholder="Price"
       typeof="number"
       value={300}
@@ -62,6 +170,8 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     className="formField"
   >
     <input
+      name="quantity"
+      onChange={[Function]}
       placeholder="Quantity"
       typeof="number"
       value={3}
@@ -71,6 +181,8 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
     as={[Function]}
     className="formField"
     control={[Function]}
+    name="description"
+    onChange={[Function]}
     placeholder="Short Description"
     value="admin@mail.com"
   />

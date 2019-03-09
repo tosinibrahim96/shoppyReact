@@ -9,6 +9,7 @@ exports[`Test the Attendant Component should match snapshot 1`] = `
 
 exports[`Test the Category Component should match snapshot 1`] = `
 <Navbar
+  currentPage="category"
   displayPage={
     Array [
       <Connect(InfoCards)

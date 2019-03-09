@@ -3,7 +3,7 @@ import ProductForm from '../components/ModalForms/ProductForm';
 import CategoryForm from '../components/ModalForms/CategoryForm';
 import AttendantForm from '../components/ModalForms/AttendantForm';
 
-export default function SelectModalForm(currentPage, props) {
+export default function SelectModalForm(currentPage, props = {}) {
   switch (currentPage) {
     case 'product':
       return <ProductForm details={props} />;
