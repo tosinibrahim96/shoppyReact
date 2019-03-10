@@ -55,7 +55,7 @@ class InfoCard extends Component {
     if (allAttendants.successResponse.length > 0) {
       dashboardCards.push({
         description: 'Attendants',
-        numberOfItems: allAttendants.successResponse.length,
+        numberOfItems: allAttendants.successResponse.length - 1,
         path: 'attendants'
       });
     }
