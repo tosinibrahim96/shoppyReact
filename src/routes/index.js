@@ -5,6 +5,7 @@ import Category from '../containers/Category';
 import Product from '../containers/Product';
 import Attendant from '../containers/Attendant';
 import UnauthorizedPage from '../containers/Unauthorized';
+import ShoppingCart from '../containers/CartPage';
 
 export default [
   {
@@ -43,7 +44,12 @@ export default [
     exact: true,
     path: '/access-denied'
   },
-
+  {
+    name: 'shoppingCart',
+    component: ShoppingCart,
+    exact: true,
+    path: '/cart'
+  },
   {
     name: '404',
     component: FourOhFour,

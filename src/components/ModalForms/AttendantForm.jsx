@@ -85,7 +85,7 @@ class AttendantForm extends Component {
             onChange={this.handleFormChange}
           />
           <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/">
-            Upload image here
+            Upload image here and provide link
           </a>
         </Form.Field>
       </Fragment>

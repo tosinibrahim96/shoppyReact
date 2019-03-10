@@ -46,6 +46,7 @@ class CategoryForm extends Component {
     return (
       <Form className="modalForm" onSubmit={this.handleFormSubmit}>
         <Form.Field className="formField">
+          <label>Category Name</label>
           <input
             placeholder="Category Name"
             value={name}
@@ -54,6 +55,7 @@ class CategoryForm extends Component {
           />
         </Form.Field>
         <Form.Field className="formField">
+          <label>Image URL</label>
           <input
             placeholder="Image URL (example:https://exampleimageurl.jpg)"
             typeof="url"
@@ -62,7 +64,7 @@ class CategoryForm extends Component {
             name="image_url"
           />
           <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/">
-            Upload image here
+            Upload image here and provide link
           </a>
         </Form.Field>
         <Form.TextArea

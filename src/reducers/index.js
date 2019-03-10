@@ -11,6 +11,7 @@ import updateProduct from './updateProductReducer';
 import addAttendant from './addAttendantReducer';
 import addCategory from './addCategoryReducer';
 import addProduct from './addProductReducer';
+import shoppingCart from './shoppingCartReducer';
 
 const rootReducer = combineReducers({
   userLogin,
@@ -24,7 +25,8 @@ const rootReducer = combineReducers({
   updateProduct,
   addAttendant,
   addCategory,
-  addProduct
+  addProduct,
+  shoppingCart
 });
 
 export default rootReducer;

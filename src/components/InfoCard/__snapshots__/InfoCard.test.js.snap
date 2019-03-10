@@ -150,6 +150,7 @@ exports[`Test the AdminCards Component should match snapshot 1`] = `
         <Button
           animated={true}
           as="button"
+          onClick={[Function]}
         >
           <ButtonContent
             visible={true}
@@ -161,8 +162,9 @@ exports[`Test the AdminCards Component should match snapshot 1`] = `
           >
             <Icon
               as="i"
-              name="arrow right"
+              name="shop"
             />
+            0
           </ButtonContent>
         </Button>
       </CardContent>

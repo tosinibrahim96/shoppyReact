@@ -29,9 +29,9 @@ exports[`Test the NavLinks Component should match snapshot 1`] = `
   <li>
     <Link
       replace={false}
-      to="/sales"
+      to="/cart"
     >
-      Sales
+      My Cart 
     </Link>
   </li>
   <li

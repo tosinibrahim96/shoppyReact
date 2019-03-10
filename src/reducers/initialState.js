@@ -70,6 +70,12 @@ const initialState = {
     success: false,
     successResponse: [],
     failureResponse: ''
+  },
+  createSale: {
+    createSaleLoading: false,
+    success: false,
+    successResponse: {},
+    failureResponse: ''
   }
 };
 

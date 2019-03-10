@@ -65,6 +65,7 @@ class ProductForm extends Component {
     return (
       <Fragment>
         <Form.Field className="formField">
+          <label>Product Name</label>
           <input
             placeholder="Product Name"
             value={this.state.productDetails.name}
@@ -73,6 +74,7 @@ class ProductForm extends Component {
           />
         </Form.Field>
         <Form.Field className="formField">
+          <label>Category</label>
           <Select
             placeholder="Select a Category"
             onClick={this.getAllCategories}
@@ -84,6 +86,7 @@ class ProductForm extends Component {
           />
         </Form.Field>
         <Form.Field className="formField">
+          <label>Image URL</label>
           <input
             placeholder="Image URL (example:https://exampleimageurl.jpg)"
             typeof="url"
@@ -92,7 +95,7 @@ class ProductForm extends Component {
             name="image_url"
           />
           <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/">
-            Upload image here
+            Upload image here and provide link
           </a>
         </Form.Field>
       </Fragment>
@@ -104,6 +107,7 @@ class ProductForm extends Component {
     return (
       <Fragment>
         <Form.Field className="formField">
+          <label>Product Price</label>
           <input
             placeholder="Price"
             typeof="number"
@@ -113,6 +117,7 @@ class ProductForm extends Component {
           />
         </Form.Field>
         <Form.Field className="formField">
+          <label>Quantity</label>
           <input
             placeholder="Quantity"
             typeof="number"
