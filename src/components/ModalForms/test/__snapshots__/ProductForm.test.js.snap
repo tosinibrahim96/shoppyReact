@@ -9,6 +9,9 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Product Name
+    </label>
     <input
       name="name"
       onChange={[Function]}
@@ -19,6 +22,9 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Category
+    </label>
     <Select
       name="category_id"
       onChange={[Function]}
@@ -42,6 +48,9 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Image URL
+    </label>
     <input
       name="image_url"
       onChange={[Function]}
@@ -54,12 +63,15 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      Upload image here
+      Upload image here and provide link
     </a>
   </FormField>
   <FormField
     className="formField"
   >
+    <label>
+      Product Price
+    </label>
     <input
       name="price"
       onChange={[Function]}
@@ -71,6 +83,9 @@ exports[`Test the ProductForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Quantity
+    </label>
     <input
       name="quantity"
       onChange={[Function]}
@@ -106,6 +121,9 @@ exports[`Test the ProductForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Product Name
+    </label>
     <input
       name="name"
       onChange={[Function]}
@@ -116,6 +134,9 @@ exports[`Test the ProductForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Category
+    </label>
     <Select
       name="category_id"
       onChange={[Function]}
@@ -140,6 +161,9 @@ exports[`Test the ProductForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Image URL
+    </label>
     <input
       name="image_url"
       onChange={[Function]}
@@ -152,12 +176,15 @@ exports[`Test the ProductForm Component should match snapshot 2`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      Upload image here
+      Upload image here and provide link
     </a>
   </FormField>
   <FormField
     className="formField"
   >
+    <label>
+      Product Price
+    </label>
     <input
       name="price"
       onChange={[Function]}
@@ -169,6 +196,9 @@ exports[`Test the ProductForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Quantity
+    </label>
     <input
       name="quantity"
       onChange={[Function]}

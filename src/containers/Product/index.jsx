@@ -13,6 +13,10 @@ class Product extends Component {
   };
 
   render() {
+    const currentItems = JSON.parse(localStorage.getItem('myCart'));
+    if (!currentItems) {
+      localStorage.setItem('myCart', JSON.stringify([]));
+    }
     const { successResponse, productsLoading } = this.props.allProducts;
     const result = getUserInfo();
     if (!result) {

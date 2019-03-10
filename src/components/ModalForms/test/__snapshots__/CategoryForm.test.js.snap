@@ -9,6 +9,9 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Category Name
+    </label>
     <input
       name="name"
       onChange={[Function]}
@@ -19,6 +22,9 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Image URL
+    </label>
     <input
       name="image_url"
       onChange={[Function]}
@@ -31,7 +37,7 @@ exports[`Test the CategoryForm Component should match snapshot 1`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      Upload image here
+      Upload image here and provide link
     </a>
   </FormField>
   <FormTextArea
@@ -61,6 +67,9 @@ exports[`Test the CategoryForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Category Name
+    </label>
     <input
       name="name"
       onChange={[Function]}
@@ -71,6 +80,9 @@ exports[`Test the CategoryForm Component should match snapshot 2`] = `
   <FormField
     className="formField"
   >
+    <label>
+      Image URL
+    </label>
     <input
       name="image_url"
       onChange={[Function]}
@@ -83,7 +95,7 @@ exports[`Test the CategoryForm Component should match snapshot 2`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      Upload image here
+      Upload image here and provide link
     </a>
   </FormField>
   <FormTextArea

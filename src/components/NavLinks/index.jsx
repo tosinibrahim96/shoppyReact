@@ -18,7 +18,7 @@ export default class NavLinks extends Component {
     }
     return (
       <li>
-        <Link to="/sales">Sales</Link>
+        <Link to="/cart">My Cart </Link>
       </li>
     );
   };

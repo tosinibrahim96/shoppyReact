@@ -30,6 +30,13 @@ class Navbar extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
+  checkItemsInCart = () => {
+    const currentItems = JSON.parse(localStorage.getItem('myCart'));
+    if (currentItems) {
+      return currentItems.length;
+    }
+  };
+
   render() {
     let backdrop;
     const { open } = this.state;

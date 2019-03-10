@@ -17,7 +17,8 @@ import './InfoCard.scss';
 class InfoCards extends Component {
   state = {
     open: false,
-    deleteOpen: false
+    deleteOpen: false,
+    shoppingCart: []
   };
 
   onOpenModal = () => {
@@ -55,13 +56,24 @@ class InfoCards extends Component {
     }
   };
 
+  addToCart = (product) => {
+    const { shoppingCart } = this.state;
+    this.setState({
+      shoppingCart: shoppingCart.concat(product)
+    });
+    const currentItems = JSON.parse(localStorage.getItem('myCart'));
+    currentItems.push(product);
+    localStorage.setItem('myCart', JSON.stringify(currentItems));
+  };
+
   displayAddToCartButton = (currentPage, userRole) => {
     if (currentPage === 'product' && userRole === 'attendant') {
       return (
-        <Button animated>
+        <Button animated onClick={this.addToCart.bind(this, this.props)}>
           <Button.Content visible>Add to Cart</Button.Content>
           <Button.Content hidden>
-            <Icon name="arrow right" />
+            <Icon name="shop" />
+            {this.state.shoppingCart.length}
           </Button.Content>
         </Button>
       );
