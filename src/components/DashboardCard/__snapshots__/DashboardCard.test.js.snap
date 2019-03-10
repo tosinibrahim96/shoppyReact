@@ -209,7 +209,7 @@ exports[`Test the DasboardCard Component should match snapshot 2`] = `
         <h1
           className="numberOfItems"
         >
-          3
+          2
         </h1>
         <Link
           replace={false}

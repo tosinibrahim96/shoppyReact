@@ -28,18 +28,23 @@ class Attendant extends Component {
     }
     return result.userRole === 'admin' ? (
       <Navbar
-        displayPage={successResponse.map(({ id, email, image_url, mobile_number, first_name }) => (
-          <AttendantComponent
-            key={id}
-            id={id}
-            nameToDisplay={first_name}
-            imageUrl={image_url}
-            currentPage="attendant"
-            description={email}
-            mobileNumber={mobile_number}
-            userRole={result.userRole}
-          />
-        ))}
+        displayPage={successResponse.map(({ id, email, image_url, mobile_number, first_name }) => {
+          if (email === 'admin@mail.com') {
+            return '';
+          }
+          return (
+            <AttendantComponent
+              key={id}
+              id={id}
+              nameToDisplay={first_name}
+              imageUrl={image_url}
+              currentPage="attendant"
+              description={email}
+              mobileNumber={mobile_number}
+              userRole={result.userRole}
+            />
+          );
+        })}
         currentPage="attendant"
       />
     ) : (
